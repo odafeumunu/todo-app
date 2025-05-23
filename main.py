@@ -375,36 +375,6 @@ def unpinned(task_id):
 
 
 
-@app.route("/preview-email")
-def preview_email():
-    return render_template("task-reminder.html", user_name=current_user.name, due_date=current_user.email) 
-
-
-        
-def send_completion_email(user_email, user_name, task_title, completed_at): 
-    with app.app_context():
-        html_body = render_template(
-            "task-complete.html",
-            user_name=user_name,
-            task_title=task_title,
-            completed_at=completed_at.strftime('%Y-%m-%d, %H:%M')
-        )            
-        
-        message = Mail(
-                from_email=MY_EMAIL,
-                to_emails=user_email,
-                subject='🎉 Task Completed',
-                html_content=html_body
-            )
-        try:
-            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-            response = sg.send(message)     
-            return f'✅ Email sent! Status: {response.status_code}'        
-        except Exception as e:
-            return f'❌ Error: {str(e)}'
-        
-
-
 @app.route("/complete/<int:task_id>", methods=["GET", "POST"])
 @login_required
 def complete_task(task_id):
@@ -417,18 +387,29 @@ def complete_task(task_id):
 
     db.session.commit()
 
-    # Schedule email 10 seconds later
-    job_id = f"email_{current_user.id}_{task_id}"
-    scheduler.add_job(
-        id=job_id,
-        func=send_completion_email,
-        args=[current_user.email, current_user.name, user_task.task, user_task.completed_at],
-        trigger="date",
-        run_date=datetime.now() + timedelta(seconds=10),
-        replace_existing=True
-    )
-    flash("Task marked as complete", "success")
-    return redirect(url_for("dashboard"))
+    html_body = render_template(
+        "task-complete.html",
+        user_name=current_user.name,
+        task_title=user_task.task,
+        completed_at=user_task.completed_at.strftime('%Y-%m-%d, %H:%M')
+    )            
+    
+    message = Mail(
+            from_email=MY_EMAIL,
+            to_emails=current_user.email,
+            subject='🎉 Task Completed',
+            html_content=html_body
+        ) 
+    try:
+        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+        response = sg.send(message)  
+        print(f'✅ Email sent! Status: {response.status_code}')   
+        flash("Task marked as complete", "success")
+        return redirect(url_for("dashboard"))       
+    except Exception as e:
+        print(f'❌ Error: {str(e)}')
+        return f'❌ Error: {str(e)}'
+    
 
 
 
@@ -489,3 +470,5 @@ def robots_txt():
     return app.send_static_file("robots.txt")
 
 
+if __name__ == '__main__':
+    app.run(debug=True)
