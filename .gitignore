@@ -1,34 +1,5 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pyc
-
-# Virtual environment
 .venv/
-venv/
-ENV/
-
-# macOS
-.DS_Store
-
-# VS Code
-.vscode/
-
-# Environment variables
 .env
-
-# SQLite database (if you're using one)
-*.sqlite3
-
-# Logs
-*.log
-app.log
-
-# OS Files
-Thumbs.db
-ehthumbs.db
-
-# Pytest cache
-.pytest_cache/
+__pycache__/
+*.pyc
+.DS_Store
