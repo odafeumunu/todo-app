@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Doit || {{ user.name }}
+{% endblock %}
+    
+{% block body%} 
+
+    
+
+    {% include "dashboard_header.html" with context %}
+    {% include "flash.html" %}
+    <main class="db-section">
+        <div class="container">
+            <div class="profile-container">
+                <div class="user-info">
+                    <div class="left">
+                        <div class="image">
+                            {% if user.profile_pic %}
+                                <img src="{{ url_for('static', filename='profile_pics/' + user.profile_pic) }}" alt="profile" class="profile-pic" />
+                            {% else %}
+                                <img src="{{ url_for('static', filename='images/user_profile.png') }}" alt="profile" class="profile-pic" />
+                            {% endif %}
+                        </div>
+                        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="upload-form">                            
+                            {{ form.csrf_token }}
+                            <div class="edit-icon">
+                                <i class="ri-edit-2-line"></i>
+                                {{ form.image(class="hidden-file-input", onchange="document.getElementById('upload-form').submit();") }}
+                            </div>     
+                        </form>
+                        
+                    </div>
+                    <div class="right">
+                        <h2>{{ user.name }}</h2>
+                        <p><span>Email:</span> {{ user.email }}</p>
+                        <p><span>Date Joined:</span> {{ user.date_joined.strftime("%B %d, %Y") }}</p>
+                    </div>               
+                </div>
+                    
+
+                <div class="todo-stats">
+                    <div class="task_col">
+                        <div class="cover">
+                            <i class="ri-list-check-2 total"></i>
+                            <div class="inner">
+                                <h3>Total Task <br> Added</h3>
+                                <p>{{ user.tasks_added }}</p>
+                            </div>
+                        </div>
+
+                        <div class="cover">                            
+                            <i class="ri-trophy-fill completed"></i>
+                            <div class="inner">
+                                <h3>Total Task <br> Completed</h3>
+                                <p>{{ user.tasks_completed }}</p>
+                            </div>
+                        </div>
+
+                        <div class="cover">
+                            <i class="ri-hourglass-fill pending"></i>
+                            <div class="inner">                                
+                                <h3>Total Task <br> Pending</h3>
+                                <p>{{ current_user.tasks_added - current_user.tasks_completed }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

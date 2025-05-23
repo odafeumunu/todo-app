@@ -1,0 +1,375 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Doit || Dashboard
+{% endblock %}
+
+    
+{% block body%}
+
+    {% include "dashboard_header.html" with context  %}
+
+    {% include "flash.html" %}
+
+    <!-- main start -->
+    <main class="db-section">
+        <div class="container">
+            <div class="dash-inner">
+                <h2>Hi, <span style="color :#90ee90">{{ name }}</span></h2>
+                
+                <form action="{{ url_for('dashboard') }}" method="post" class="Form" novalidate>
+                    <div class="inputFi">
+                        <div class="add_task">
+                            {{ form.csrf_token }}
+                            
+                            <i class="ri-list-check-2"></i>
+                            {{ form.add_task(placeholder='Add task...') }}
+                        </div>
+                        {% for error in form.add_task.errors %} 
+                            <p class="error">{{error}}</p>
+                        {% endfor %}
+                        
+                        {{ form.due_date.label(style='display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;') }}
+                        {% for error in form.due_date.errors %} 
+                            <p class="error">{{error}}</p>
+                        {% endfor %}
+                        <div class="add_task">                        
+                            {{ form.due_date }}                        
+                        </div>                    
+                    </div>
+                    <button type="submit" class="task-submit">
+                        <i class="ri-check-line"></i>
+                    </button>
+                </form>
+                            
+                <div class="pin-task">        
+                    <!-- Pin -->
+                    <div class="txt">
+                        <strong style="display: inline-flex;margin-bottom: 15px;"><span style="margin-right: 7px;">📌</span>Pinned:</strong>
+                    </div>
+                    <!-- Pin -->   
+                    
+                    {% if tasks %}
+                        {% set pinned_tasks = tasks | selectattr('is_pinned') | list %}
+                        {% if pinned_tasks|length == 0 %}
+                            <p style="font-size: 1rem;">You have not pinned any task yet</p>
+                        {% else %}
+                            {% for item in pinned_tasks %}
+                                <div class="flex-te"> 
+                                    <div class="text-chek">                                    
+                                        <form action="{{ url_for('complete_task', task_id=item.id) }}" method="post" novalidate>
+                                        
+                                            {{ complete_forms[item.id].csrf_token }}
+                                            {{ complete_forms[item.id].checkbox(
+                                                class='checkbox',
+                                                onchange="this.form.submit(); this.disabled = true;"
+                                                , checked=item.is_completed, disabled=item.is_completed
+                                            ) }}
+                                        </form>
+                                        <p>
+                                            {% if item.is_completed %}
+                                                <span style="font-size: 0.85rem;"><i>Completed: </i></span>
+                                                <strike><i style="color: red">{{ item.task }}</i></strike>
+                                            {% else %}
+                                                {{ item.task }}
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                    <div class="edit-items">
+                                        <i class="ri-more-2-line edit-i"></i>
+                                        <div class="items">  
+                                            {% if not item.is_completed %}                               
+                                                {% if item.is_pinned %}
+                                                    <a href="{{ url_for('unpinned', task_id=item.id) }}">
+                                                        <div class="fle">
+                                                            <i class="ri-pushpin-line"></i>
+                                                            <span>Unpin task</span>
+                                                        </div>
+                                                    </a>
+                                                {% else%}
+                                                <a href="{{ url_for('pinned', task_id=item.id) }}">
+                                                    <div class="fle">
+                                                        <i class="ri-pushpin-line"></i>
+                                                        <span>Pin task</span>
+                                                    </div>
+                                                </a>
+                                                {% endif %}
+                                                <a href="#" class="edit-task" 
+                                                    data-task-id="{{ item.id }}" 
+                                                    data-task-text="{{ item.task }}" 
+                                                    data-due-date="{{ item.due_date.isoformat() }}">
+                                                    <div class="fle">
+                                                        <i class="ri-edit-line"></i>
+                                                        <span>Edit task</span>
+                                                    </div>
+                                                </a>
+                                            {% endif %}
+                                            <a href="#" class="delete-task">
+                                                <div class="fle">
+                                                    <i class="ri-delete-bin-6-line"></i>
+                                                    <span>Delete task</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="open-details">
+                                                <div class="fle">
+                                                    <i class="ri-list-check-3"></i>
+                                                    <span>Task Details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- details modal star -->
+                                    <div class="details-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                            <div class="inner">
+                                                <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>{{ item.task }}</p>
+                                                <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                                <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                                {% if item.completed_at %}
+                                                    <p>📅
+                                                        <strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                        <span style="color: green;">Completed</span>
+                                                    </p>
+                                                    <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                        {{ item.completed_at.strftime("%Y-%m-%d, %H:%M") }}
+                                                    </p>
+                                                    {% else %}
+                                                    <p>📅<strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                        <span style="color: red;">Not Completed</span>
+                                                    </p>
+                                                    <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                        -
+                                                    </p>
+                                                {% endif %}                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- details modal end -->
+
+                                    <!-- delete modal star -->
+                                    <div class="delete-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                            <div class="inner">
+                                                <p style="font-size: 1rem;">
+                                                    Are you sure you want to delete: <br>
+                                                    <strong style="display: inline-block;margin-top: 10px;">
+                                                        {{ item.task }}?
+                                                    </strong>
+                                                </p>
+                                                <div class="flex-btn">
+                                                    <button class="d-btn db-back">Back</button>
+                                                
+                                                    <a href="{{ url_for('delete', task_id=item.id) }}"  class="d-btn db-del">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- delete modal end -->
+
+                                    <!-- edit modal star -->
+                                    <div class="edit-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                        
+                                            <form class="inner form" action="{{ url_for('edit', task_id=item.id) }}" method="post">                                            
+                                                <div class="taskEdit">
+                                                    {{ form.csrf_token }}
+                                                    
+                                                    <i class="ri-list-check-2"></i>
+                                                    {{ form.add_task }}
+                                                </div>                                    
+                                                {{ form.due_date.label(style='display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;') }}
+                                                <div class="taskEdit">                        
+                                                    {{ form.due_date }}                                        
+                                                </div>    
+                                                <button type="submit" class="d-btn">
+                                                    Update Task
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- edit modal end -->
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% else %}
+                        <p>❌ No task available to be pinned</p>
+                    {% endif %}
+                </div> 
+                    
+
+                <!-- Search Task -->
+                <div class="task-txt">
+                    <strong><span style="margin-right: 7px;">📝</span>Tasks:</strong>
+                </div>
+                <!-- Search Task -->  
+
+                {% if tasks %}    
+                    {% for item in tasks %}
+                        {% if item.is_pinned == False %}
+                        <div class="flex-te"> 
+                            <div class="text-chek">
+                                <form action="{{ url_for('complete_task', task_id=item.id) }}" method="post">
+                                    {{ complete_forms[item.id].csrf_token }}
+                                    {{ complete_forms[item.id].checkbox(
+                                        class='checkbox',
+                                        onchange="this.form.submit(); this.disabled = true;"
+                                        , checked=item.is_completed, disabled=item.is_completed
+                                    ) }}
+                                </form>
+                                <p>
+                                    {% if item.is_completed %}
+                                        <span style="font-size: 0.85rem;"><i>Completed: </i></span>
+                                        <strike><i style="color: red">{{ item.task }}</i></strike>
+                                    {% else %}
+                                        {{ item.task }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="edit-items">
+                                <i class="ri-more-2-line edit-i"></i>
+                                <div class="items">  
+                                    {% if not item.is_completed %}                              
+                                        {% if item.is_pinned %}
+                                            <a href="{{ url_for('unpinned', task_id=item.id) }}">
+                                                <div class="fle">
+                                                    <i class="ri-pushpin-line"></i>
+                                                    <span>Unpin task</span>
+                                                </div>
+                                            </a>
+                                        {% else%}
+                                        <a href="{{ url_for('pinned', task_id=item.id) }}">
+                                            <div class="fle">
+                                                <i class="ri-pushpin-line"></i>
+                                                <span>Pin task</span>
+                                            </div>
+                                        </a>
+                                        {% endif %}
+                                        <a href="#" class="edit-task" 
+                                            data-task-id="{{ item.id }}" 
+                                            data-task-text="{{ item.task }}" 
+                                            data-due-date="{{ item.due_date.isoformat() }}">
+                                            <div class="fle">
+                                                <i class="ri-edit-line"></i>
+                                                <span>Edit task</span>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                    <a href="#" class="delete-task">
+                                        <div class="fle">
+                                            <i class="ri-delete-bin-6-line"></i>
+                                            <span>Delete task</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="open-details">
+                                        <div class="fle">
+                                            <i class="ri-list-check-3"></i>
+                                            <span>Task Details</span>
+                                        </div>
+                                    </a>                                 
+                                </div>
+                            </div>
+                            <!-- details modal star -->
+                            <div class="details-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                    <div class="inner">
+                                        <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>{{ item.task }}</p>
+                                        <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                        <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                        {% if item.completed_at %}
+                                            <p>📅
+                                                <strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                <span style="color: green;">Completed</span>
+                                            </p>
+                                            <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                {{ item.completed_at.strftime("%Y-%m-%d, %H:%M") }}
+                                            </p>
+                                            {% else %}
+                                            <p>📅<strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                <span style="color: red;">Not Completed</span>
+                                            </p>
+                                            <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                -
+                                            </p>
+                                        {% endif %}                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- details modal end -->
+
+                            <!-- delete modal star -->
+                            <div class="delete-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                    <div class="inner">
+                                        <p style="font-size: 1rem;">
+                                            Are you sure you want to delete: <br>
+                                            <strong style="display: inline-block;margin-top: 10px;">
+                                                {{ item.task }}?
+                                            </strong>
+                                        </p>
+                                        <div class="flex-btn">
+                                            <button class="d-btn db-back">Back</button>
+                                        
+                                            <a href="{{ url_for('delete', task_id=item.id) }}"  class="d-btn db-del">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- delete modal end -->
+
+                            <!-- edit modal star -->
+                            <div class="edit-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                
+                                    <form class="inner form" action="{{ url_for('edit', task_id=item.id) }}" method="post">
+                                        <div class="taskEdit">
+                                            {{ form.csrf_token }}
+                                            
+                                            <i class="ri-list-check-2"></i>
+                                            {{ form.add_task(placeholder='Add task...') }}
+                                        </div>                                    
+                                        {{ form.due_date.label(style='display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;') }}
+                                        <div class="taskEdit">                        
+                                            {{ form.due_date }}                                        
+                                        </div>    
+                                        <button type="submit" class="d-btn">
+                                            Update Task
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- edit modal end -->
+                        </div>
+                        {% endif %}                
+                    {% endfor %}
+                {% else %}
+                    <p>❌ No task yet, kindly add task</p>
+                {% endif %}
+            </div>           
+
+        </div>
+    </main>
+    <!-- main end -->
+
+    
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

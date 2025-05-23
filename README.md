@@ -1,0 +1,138 @@
+# 🚀 Doit: Your Agile Task Manager 🚀
+
+Tired of juggling tasks and missing deadlines? 🤔 **Doit** is here to supercharge your productivity! ✨ This modern web application helps you stay organized, set reminders, and track your progress effortlessly. 🎯
+
+## 🛠️ Installation
+
+Get started with Doit in just a few simple steps!
+
+- 💾 **Clone the Repository**:
+
+  ```bash
+  git clone <repository-url>
+  ```
+
+- 🔧 **Set Up the Environment**:
+
+  ```bash
+  python -m venv venv
+  venv\Scripts\activate  # For Windows
+  source venv/bin/activate  # For macOS and Linux
+  ```
+
+- 📦 **Install Dependencies**:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- ⚙️ **Configure Environment Variables**:
+
+  Create a `.env` file in the project root with the following:
+
+  ```
+  FLASK_KEY=<your_secret_key>
+  DB_URI=sqlite:///todo.db
+  MY_EMAIL=<your_email>
+  SENDGRID_API_KEY=<your_sendgrid_api_key>
+  ```
+
+- 🚀 **Run the Application**:
+
+  ```bash
+  python main.py
+  ```
+
+## 💻 Usage
+
+### Adding Tasks
+
+1.  Go to the dashboard.
+2.  Enter your task and due date, then click the Add Task button.
+
+### Completing Tasks
+
+1.  Find the checkbox next to the task.
+2.  Click the checkbox to mark the task as complete.
+
+### Editing Tasks
+
+<details>
+<summary>Click to expand</summary>
+
+1.  On the dashboard, click the "More" icon next to the task.
+2.  Select "Edit task".
+3.  Modify the task and click "Update Task".
+</details>
+
+### Deleting Tasks
+
+<details>
+<summary>Click to expand</summary>
+
+1.  Click the "More" icon next to the task.
+2.  Select "Delete task".
+3.  Confirm the deletion.
+</details>
+
+### Pinning Tasks
+
+<details>
+<summary>Click to expand</summary>
+
+1.  Click the "More" icon next to the task.
+2.  Select "Pin task" to keep it at the top.
+</details>
+
+### Uploading Profile Picture
+
+1.  Navigate to your profile page.
+2.  Click the edit icon to upload a new image.
+
+## ✨ Features
+
+- ✅ **Task Management**: Easily add, edit, and delete tasks.
+- 📌 **Task Pinning**: Pin important tasks to keep them top of mind.
+- ⏰ **Email Reminders**: Get notified 15 minutes before a task is due.
+- 📊 **Progress Tracking**: See your completed, pending, and total tasks.
+- 🌙 **Light/Dark Mode**: Customize your experience with light and dark themes.
+- 🔐 **Password Reset**: Password reset functionality via email with token validation.
+- 📸 **Profile Picture Upload**: Users can upload a profile picture.
+
+## 🛠️ Technologies Used
+
+| Technology    | Description                                      | Link                                                                      |
+| :------------ | :----------------------------------------------- | :------------------------------------------------------------------------ |
+| Python        | Core programming language                        | [https://www.python.org/](https://www.python.org/)                       |
+| Flask         | Web framework                                    | [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)    |
+| SQLAlchemy    | ORM for database interactions                    | [https://www.sqlalchemy.org/](https://www.sqlalchemy.org/)                |
+| Flask-Login   | User session management                          | [https://flask-login.readthedocs.io/](https://flask-login.readthedocs.io/) |
+| Flask-WTF     | Form handling                                    | [https://flask-wtf.readthedocs.io/](https://flask-wtf.readthedocs.io/)    |
+| SendGrid      | Email services for sending task reminders and completion notifications   | [https://sendgrid.com/](https://sendgrid.com/)  |
+| APScheduler   | In-process scheduler for emails                   | [https://apscheduler.readthedocs.io/](https://apscheduler.readthedocs.io/)   |
+| HTML/CSS/JS   | Frontend technologies                            | N/A                                                                       |
+
+## 🤝 Contributing
+
+Contributions are always welcome! Here’s how you can help:
+
+- 🐛 **Report Bugs**: Let us know if you find any issues.
+- 🌟 **Suggest Features**: Share your ideas for new features.
+- 💻 **Submit Pull Requests**: Contribute code changes.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 👨‍💻 Author Info
+
+- Name: Umunu Odafe Peter
+  - GitHub: [https://github.com/odafeumunu](https://github.com/odafeumunu)
+  - Twitter: [https://x.com/umunu_odafe](https://x.com/umunu_odafe)
+
+[![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat-square&logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-%23000.svg?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-E34F26?style=flat-square&logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)

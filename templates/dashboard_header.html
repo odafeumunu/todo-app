@@ -1,0 +1,60 @@
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">    
+{% endblock %}
+
+
+<!-- header start -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="../static/images/logo.png" class="logo-black" alt="logo">
+            <img src="../static/images/logo-white.png" class="logo-white" alt="logo">
+        </div>
+        
+        <div style="display: flex;align-items: center;">
+            <div class="light-dark" onclick="darkLight()">
+                <i class="ri-sun-fill one"></i>
+                <i class="ri-moon-fill two"></i>
+            </div>
+            <a href="{{ url_for('user_profile') }}" class="user-icon b-screen">
+                {% if user.profile_pic %}
+                    <img src="{{ url_for('static', filename='profile_pics/' + user.profile_pic) }}" alt="profile" class="profile-pic" />
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/user_profile.png') }}" alt="profile" class="profile-pic" />
+                {% endif %}
+            </a>
+            <div class="toggle s-screen" id="toggle" onclick="openNav()">
+                <div class="tog"></div>
+                <div class="tog"></div>
+                <div class="tog"></div>
+            </div>
+        </div>
+        
+    </div>
+</header>
+<!-- heeader end -->
+
+
+<!-- sidebar start -->
+<div class="sidebar" id="nav">
+    <ul>
+        <li class="{% if active_page == 'dashboard' %}active{% endif %}">
+            <a href="{{ url_for('dashboard') }}">
+                <i class="ri-dashboard-line"></i> Dashboard
+            </a>
+        </li>
+        <li class="{% if active_page == 'profile' %}active{% endif %}">
+            <a href="{{ url_for('user_profile') }}">
+                <i class="ri-user-line"></i> My Profile
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('logout') }}">
+                <i class="ri-logout-box-line"></i> Logout
+            </a>
+        </li>
+    </ul>   
+</div>
+<div id="sideDark" onclick="closeNav()"></div>
+<!-- sidebar end -->

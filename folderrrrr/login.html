@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Your Regular Todo || Sign In </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body id="body">
+    
+    <div class="log-container">        
+        <div class="text">
+            <div class="container">
+                <h1>Welcome <br> Back</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque maxime facilis distinctio, pariatur perspiciatis accusantium.</p>
+                <a href="" class="btn">Sign Up</a>
+            </div>      
+        </div>
+        <div class="form">
+            <div class="logo">
+                <a href="">
+                    <img src="images/logo.png" height="30px" alt="logo">
+                </a> 
+            </div>
+            <form action="" method="post">
+                <h2>Sign In</h2>
+                <label for="email">Enter Email:</label>  
+                <div class="input" id="inputField">
+                    <i class="ri-mail-fill"></i>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <label for="password">Enter Password:</label>  
+                <div class="input" id="inputField">
+                    <i class="ri-lock-fill"></i>
+                    <input type="password" name="password" id="password" required>
+                </div>  
+                <div class="show" onclick="showPassword()">
+                    <span id="eye">👁️</span>
+                    <span id="close_eye">🙈</span>
+                </div>        
+
+                <button type="submit" class="btn">Sign Up</button>
+                
+
+                <p style="margin-top: 20px;"><a href="" style="color: dodgerblue;">Forgot password?</a></p>
+
+                <p class="dislpay-in-media" style="margin-top: 20px;">Don't have an account? <a href="" style="color: dodgerblue;">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="js/log-reg.js"></script>
+</body>
+</html>
+

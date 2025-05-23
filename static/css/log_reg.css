@@ -1,0 +1,116 @@
+.log-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    gap: 30px;
+}
+.log-container h1{
+    color: #fff;
+}
+.log-container .text{
+    height: 100%;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.log-container .text p{
+    color: var(--light);
+    margin: 25px 0;
+}
+.log-container .logo{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.log-container .form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 100%;
+    padding: 40px 25px;
+}
+form h2{
+    color: var(--accent-color);
+}
+form label{
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+form .input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 5px 0;
+}
+form .input i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #cccccc44;
+}
+.show{
+    position: relative;
+}
+.show span{
+    position: absolute;
+    right: 0;
+    top: -43px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+form input{
+    display: inline-block;
+    width: 100%;
+    border: 1.5px solid #cccccca7;
+    border-radius: 5px;
+    padding: 8px 12px 8px 50px;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: transparent;
+    transition: var(--transition);
+}
+.input.focused input, form input:focus {
+  border: 1.5px solid var(--accent-color);
+}
+
+form .btn{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.dislpay-in-media{
+    display: none;
+}
+@media only screen and (max-width: 768px){
+    .log-container{
+        grid-template-columns: subgrid;
+        padding-top: 50px;
+        overflow: auto;
+    }
+    .log-container .text{
+        display: none;
+    }
+    .log-container .form{
+        display: block;
+
+    }
+    .dislpay-in-media{
+        display: block;
+    }
+}
+

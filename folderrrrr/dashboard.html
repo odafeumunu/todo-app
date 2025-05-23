@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+    Doit || Dashboard
+</title>
+     
+    
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body id="body">
+    
+
+     
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">    
+
+
+
+<!-- header start -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" class="logo-black" alt="logo">
+            <img src="images/logo-white.png" class="logo-white" alt="logo">
+        </div>
+        
+        <div style="display: flex;align-items: center;">
+            <div class="light-dark" onclick="darkLight()">
+                <i class="ri-sun-fill one"></i>
+                <i class="ri-moon-fill two"></i>
+            </div>
+            <a href="/profile" class="user-icon b-screen">
+                
+                    <img src="profile_pics/1_1747757814_ab5fd664ea2544d598dfe02074f8f200_Peee.jpg" alt="profile" class="profile-pic" />
+                
+            </a>
+            <div class="toggle s-screen" id="toggle" onclick="openNav()">
+                <div class="tog"></div>
+                <div class="tog"></div>
+                <div class="tog"></div>
+            </div>
+        </div>
+        
+    </div>
+</header>
+<!-- heeader end -->
+
+
+<!-- sidebar start -->
+<div class="sidebar" id="nav">
+    <ul>
+        <li class="active">
+            <a href="/dashboard">
+                <i class="ri-dashboard-line"></i> Dashboard
+            </a>
+        </li>
+        <li class="">
+            <a href="/profile">
+                <i class="ri-user-line"></i> My Profile
+            </a>
+        </li>
+        <li>
+            <a href="/logout">
+                <i class="ri-logout-box-line"></i> Logout
+            </a>
+        </li>
+    </ul>   
+</div>
+<div id="sideDark" onclick="closeNav()"></div>
+<!-- sidebar end -->
+
+    <div id="flash-container">
+    
+</div>
+
+<style>
+  #flash-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .flash-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .flash-message.hide {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  .flash-circle-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+
+  .flash-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .progress-ring {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .progress-ring__circle {
+    stroke-dasharray: 138;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 5s linear;
+  }
+
+  .flash-text {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+
+  }
+
+  /* === Type-Specific Styles === */
+
+  /* ✅ Success */
+  .flash-message.success .flash-circle {
+    background-color: #d4edda;
+  }
+  .flash-message.success .flash-text {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .flash-message.success .progress-ring__circle {
+    stroke: #28a745;
+  }
+
+  /* ❌ Error */
+  .flash-message.error .flash-circle {
+    background-color: #f8d7da;
+  }
+  .flash-message.error .flash-text {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  .flash-message.error .progress-ring__circle {
+    stroke: #dc3545;
+  }
+
+  /* ⚠️ Warning */
+  .flash-message.warning .flash-circle {
+    background-color: #fff3cd;
+  }
+  .flash-message.warning .flash-text {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  .flash-message.warning .progress-ring__circle {
+    stroke: #ffc107;
+  }
+
+  /* ℹ️ Info (Optional) */
+  .flash-message.info .flash-circle {
+    background-color: #d1ecf1;
+  }
+  .flash-message.info .flash-text {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  .flash-message.info .progress-ring__circle {
+    stroke: #17a2b8;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".flash-message").forEach((flash) => {
+      const ring = flash.querySelector(".progress-ring__circle");
+      const duration = 5000;
+      const radius = ring.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      ring.style.strokeDasharray = `${circumference} ${circumference}`;
+      ring.style.strokeDashoffset = "0";
+
+      setTimeout(() => {
+        ring.style.strokeDashoffset = `${circumference}`;
+      }, 100);
+
+      setTimeout(() => {
+        flash.classList.add("hide");
+        setTimeout(() => flash.remove(), 1000);
+      }, duration);
+    });
+  });
+</script>
+
+    <!-- main start -->
+    <main class="db-section">
+        <div class="container">
+            <div class="dash-inner">
+                <h2>Hi, <span style="color :#90ee90">Umunu</span></h2>
+                
+                <form action="/dashboard" method="post" class="Form" novalidate>
+                    <div class="inputFi">
+                        <div class="add_task">
+                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjdiNWUxMWIzZTAwOTIwMGJlN2MzMjZmZTE2YTc5ZWIzNzc5ZTNjNTUi.aC2_qA.7IR72cL0NY59j51ZujotmcvDKfs">
+                            
+                            <i class="ri-list-check-2"></i>
+                            <input id="add_task" name="add_task" required type="text" value="">
+                        </div>
+                        
+                        
+                        <label for="due_date" style="display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;">Set due date and time:</label>
+                        
+                        <div class="add_task">                        
+                            <input id="due_date" name="due_date" required type="datetime-local" value="">                        
+                        </div>                    
+                    </div>
+                    <button type="submit" class="task-submit">
+                        <i class="ri-check-line"></i>
+                    </button>
+                </form>
+                            
+                <div class="pin-task">        
+                    <!-- Pin -->
+                    <div class="txt">
+                        <strong style="display: inline-flex;margin-bottom: 15px;"><span style="margin-right: 7px;">📌</span>Pinned:</strong>
+                    </div>
+                    <!-- Pin -->   
+                    
+                    
+                        
+                        
+                            
+                                <div class="flex-te"> 
+                                    <div class="text-chek">                                    
+                                        <form action="/complete/3" method="post" novalidate>
+                                        
+                                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjdiNWUxMWIzZTAwOTIwMGJlN2MzMjZmZTE2YTc5ZWIzNzc5ZTNjNTUi.aC2_qA.7IR72cL0NY59j51ZujotmcvDKfs">
+                                            <input class="checkbox" id="checkbox" name="checkbox" onchange="this.form.submit(); this.disabled = true;" type="checkbox" value="y">
+                                        </form>
+                                        <p>
+                                            
+                                                Going for shopping by 6
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="edit-items">
+                                        <i class="ri-more-2-line edit-i"></i>
+                                        <div class="items">  
+                                                                           
+                                                
+                                                    <a href="/unpinned/3">
+                                                        <div class="fle">
+                                                            <i class="ri-pushpin-line"></i>
+                                                            <span>Unpin task</span>
+                                                        </div>
+                                                    </a>
+                                                
+                                                <a href="#" class="edit-task" 
+                                                    data-task-id="3" 
+                                                    data-task-text="Going for shopping by 6" 
+                                                    data-due-date="2025-05-23T21:24:00">
+                                                    <div class="fle">
+                                                        <i class="ri-edit-line"></i>
+                                                        <span>Edit task</span>
+                                                    </div>
+                                                </a>
+                                            
+                                            <a href="#" class="delete-task">
+                                                <div class="fle">
+                                                    <i class="ri-delete-bin-6-line"></i>
+                                                    <span>Delete task</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="open-details">
+                                                <div class="fle">
+                                                    <i class="ri-list-check-3"></i>
+                                                    <span>Task Details</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- details modal star -->
+                                    <div class="details-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                            <div class="inner">
+                                                <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>Going for shopping by 6</p>
+                                                <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>2025-05-23, 21:24</p>
+                                                <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>2025-05-20, 21:24</p>
+                                                
+                                                    <p>📅<strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                        <span style="color: red;">Not Completed</span>
+                                                    </p>
+                                                    <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                        -
+                                                    </p>
+                                                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- details modal end -->
+
+                                    <!-- delete modal star -->
+                                    <div class="delete-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                            <div class="inner">
+                                                <p style="font-size: 1rem;">
+                                                    Are you sure you want to delete: <br>
+                                                    <strong style="display: inline-block;margin-top: 10px;">
+                                                        Going for shopping by 6?
+                                                    </strong>
+                                                </p>
+                                                <div class="flex-btn">
+                                                    <button class="d-btn db-back">Back</button>
+                                                
+                                                    <a href="/delete/3"  class="d-btn db-del">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- delete modal end -->
+
+                                    <!-- edit modal star -->
+                                    <div class="edit-modal Modal_pop-up">
+                                        <div class="container">
+                                            <div class="close">
+                                                <i class="ri-close-large-line"></i>
+                                            </div>
+                                        
+                                            <form class="inner form" action="/edit/3" method="post">                                            
+                                                <div class="taskEdit">
+                                                    <input id="csrf_token" name="csrf_token" type="hidden" value="IjdiNWUxMWIzZTAwOTIwMGJlN2MzMjZmZTE2YTc5ZWIzNzc5ZTNjNTUi.aC2_qA.7IR72cL0NY59j51ZujotmcvDKfs">
+                                                    
+                                                    <i class="ri-list-check-2"></i>
+                                                    <input id="add_task" name="add_task" required type="text" value="">
+                                                </div>                                    
+                                                <label for="due_date" style="display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;">Set due date and time:</label>
+                                                <div class="taskEdit">                        
+                                                    <input id="due_date" name="due_date" required type="datetime-local" value="">                                        
+                                                </div>    
+                                                <button type="submit" class="d-btn">
+                                                    Update Task
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- edit modal end -->
+                                </div>
+                            
+                        
+                    
+                </div> 
+                    
+
+                <!-- Search Task -->
+                <div class="task-txt">
+                    <strong><span style="margin-right: 7px;">📝</span>Tasks:</strong>
+                </div>
+                <!-- Search Task -->  
+
+                    
+                    
+                        
+                        <div class="flex-te"> 
+                            <div class="text-chek">
+                                <form action="/complete/2" method="post">
+                                    <input id="csrf_token" name="csrf_token" type="hidden" value="IjdiNWUxMWIzZTAwOTIwMGJlN2MzMjZmZTE2YTc5ZWIzNzc5ZTNjNTUi.aC2_qA.7IR72cL0NY59j51ZujotmcvDKfs">
+                                    <input checked class="checkbox" disabled id="checkbox" name="checkbox" onchange="this.form.submit(); this.disabled = true;" type="checkbox" value="y">
+                                </form>
+                                <p>
+                                    
+                                        <span style="font-size: 0.85rem;"><i>Completed: </i></span>
+                                        <strike><i style="color: red">To visit the salon by 5pm</i></strike>
+                                    
+                                </p>
+                            </div>
+                            <div class="edit-items">
+                                <i class="ri-more-2-line edit-i"></i>
+                                <div class="items">  
+                                    
+                                    <a href="#" class="delete-task">
+                                        <div class="fle">
+                                            <i class="ri-delete-bin-6-line"></i>
+                                            <span>Delete task</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="open-details">
+                                        <div class="fle">
+                                            <i class="ri-list-check-3"></i>
+                                            <span>Task Details</span>
+                                        </div>
+                                    </a>                                 
+                                </div>
+                            </div>
+                            <!-- details modal star -->
+                            <div class="details-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                    <div class="inner">
+                                        <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>To visit the salon by 5pm</p>
+                                        <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>2025-05-22, 21:20</p>
+                                        <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>2025-05-20, 21:21</p>
+                                        
+                                            <p>📅
+                                                <strong style="margin: 0 10px 0 7px;">Status:</strong> 
+                                                <span style="color: #90ee90;">Completed</span>
+                                            </p>
+                                            <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
+                                                2025-05-20, 21:23
+                                            </p>
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- details modal end -->
+
+                            <!-- delete modal star -->
+                            <div class="delete-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                    <div class="inner">
+                                        <p style="font-size: 1rem;">
+                                            Are you sure you want to delete: <br>
+                                            <strong style="display: inline-block;margin-top: 10px;">
+                                                To visit the salon by 5pm?
+                                            </strong>
+                                        </p>
+                                        <div class="flex-btn">
+                                            <button class="d-btn db-back">Back</button>
+                                        
+                                            <a href="/delete/2"  class="d-btn db-del">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- delete modal end -->
+
+                            <!-- edit modal star -->
+                            <div class="edit-modal Modal_pop-up">
+                                <div class="container">
+                                    <div class="close">
+                                        <i class="ri-close-large-line"></i>
+                                    </div>
+                                
+                                    <form class="inner form" action="/edit/2" method="post">
+                                        <div class="taskEdit">
+                                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjdiNWUxMWIzZTAwOTIwMGJlN2MzMjZmZTE2YTc5ZWIzNzc5ZTNjNTUi.aC2_qA.7IR72cL0NY59j51ZujotmcvDKfs">
+                                            
+                                            <i class="ri-list-check-2"></i>
+                                            <input id="add_task" name="add_task" required type="text" value="">
+                                        </div>                                    
+                                        <label for="due_date" style="display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;">Set due date and time:</label>
+                                        <div class="taskEdit">                        
+                                            <input id="due_date" name="due_date" required type="datetime-local" value="">                                        
+                                        </div>    
+                                        <button type="submit" class="d-btn">
+                                            Update Task
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- edit modal end -->
+                        </div>
+                                        
+                    
+                                        
+                    
+                
+            </div>           
+
+        </div>
+    </main>
+    <!-- main end -->
+
+    
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

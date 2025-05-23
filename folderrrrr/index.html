@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+    Doit 
+</title>
+     
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body id="body">
+    
+    <!-- header start -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" class="logo-black" alt="logo">
+                <img src="images/logo-white.png" class="logo-white" alt="logo">
+            </div>
+            <ul class="nav" id="nav" onclick="closeNav()">
+                <li><a href="/" class="anchor-1">Home</a></li>
+                <li><a href="" class="anchor-3">About</a></li>
+                <li><a href="" class="anchor-3">Support</a></li>
+                <div class="light-dark big-screen" onclick="darkLight()">
+                    <i class="ri-sun-fill one"></i>
+                    <i class="ri-moon-fill two"></i>
+                </div>
+                <li><a href="/login" class="log_small anchor-4">Login</a></li>
+            </ul>
+            <div class="small-screen">
+                <div class="light-dark" onclick="darkLight()">
+                    <i class="ri-sun-fill one"></i>
+                    <i class="ri-moon-fill two"></i>
+                </div>
+
+                <div class="toggle" id="toggle" onclick="openNav()">
+                    <div class="tog"></div>
+                    <div class="tog"></div>
+                    <div class="tog"></div>
+                </div>
+            </div>
+            <a href="/login" class="btn login-big">Login</a>
+            
+        </div>
+    </header>
+    <!-- heeader end -->
+
+
+    <!-- hero start -->
+     <div class="hero">
+        <div class="container">
+            <div class="left">
+                <h1>Don't Procrastinate,<br> Do it</h1>
+                <p>A simple yet powerful to-do app to keep your day on track — with reminders, smart sorting, and email notifications</p>
+                <a href="/register" class="btn">Get Started</a>
+            </div>
+        </div>
+     </div>
+    <!-- hero end -->
+
+    <!-- container-one start -->
+    <div class="container-one">
+        <div class="container">
+            
+                <!-- content reveal start -->
+                <div class="content reveal">
+                    <div class="icon">
+                        <i class="ri-file-list-3-fill"></i>
+                    </div>
+                    <h2>Task <br> Management</h2>
+                    <p>Stay in control of your to-dos with ease. Quickly add new tasks, make changes on the fly, and pin important items to keep them at the top of your list. Simple, fast, and intuitive task management — just the way it should be.</p>
+                </div>
+                <!-- content reveal end -->
+            
+                <!-- content reveal start -->
+                <div class="content reveal">
+                    <div class="icon">
+                        <i class="ri-timer-flash-fill"></i>
+                    </div>
+                    <h2>Email <br> Reminders</h2>
+                    <p>Never miss a deadline again. Get automatic email reminders 15 minutes before your task is due, so you can stay ahead and stress-free — even on your busiest days.</p>
+                </div>
+                <!-- content reveal end -->
+            
+                <!-- content reveal start -->
+                <div class="content reveal">
+                    <div class="icon">
+                        <i class="ri-database-fill"></i>
+                    </div>
+                    <h2>Track your <br>  Tasks</h2>
+                    <p>Visualize your productivity. Instantly see how many tasks you’ve completed, what’s still pending, and what’s next. Your progress, clearly laid out — all in one view.</p>
+                </div>
+                <!-- content reveal end -->
+            
+                <!-- content reveal start -->
+                <div class="content reveal">
+                    <div class="icon">
+                        <i class="ri-camera-ai-fill"></i>
+                    </div>
+                    <h2>Upload  <br>  Profile Picture</h2>
+                    <p>Personalize your experience. Upload a profile photo to make your dashboard feel more like yours. It’s a small touch that makes a big difference.</p>
+                </div>
+                <!-- content reveal end -->
+            
+        </div>
+    </div>
+    <!-- container-one end -->
+
+
+    <!-- container-two start -->
+     <div class="container-two">
+        <div class="container">
+            <h1>How It Works</h1>          
+
+            <div class="cont">
+                
+                <div class="inner-cont reveal">
+                    <span>1</span>
+                    <h3>Create an Account</h3>
+                    <p>Sign up with your email to get started instantly — no hassle, no waiting.</p>
+                </div>
+                
+                <div class="inner-cont reveal">
+                    <span>2</span>
+                    <h3>Add Your Tasks</h3>
+                    <p>Quickly create, edit, pin delete or even check task details to stay focused and organized.</p>
+                </div>
+                
+                <div class="inner-cont reveal">
+                    <span>3</span>
+                    <h3>Get Reminders</h3>
+                    <p>Receive automatic email reminders 15 minutes before a task is due. <br> 
+            Also on completion of every task, after clicking the checkbox beside the task, you get an email notication on task comlpetion</p>
+                </div>
+                
+                <div class="inner-cont reveal">
+                    <span>4</span>
+                    <h3>Track Your Progress</h3>
+                    <p>See your completed, pending, and total tasks — all in one clean view. <br>
+            Go to you profile and see yout tasks progress</p>
+                </div>
+                
+                <div class="inner-cont reveal">
+                    <span>5</span>
+                    <h3>Dark &amp; Light Mode</h3>
+                    <p>Switch between Light and Dark themes effortlessly to match your environment and style. <br>
+            Whether you prefer a bright, clean look or a sleek, eye-friendly dark mode, 
+            your experience stays smooth and distraction-free — day or night.</p>
+                </div>
+                
+            </div>
+
+            <a class="btn" href="/register">Get Started</a>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+    <!-- container-three start -->
+     <div class="container-three">
+        <div class="container">
+            <h1>How to use the App</h1>          
+
+            <div class="cont">
+                <img class="reveal" src="images/1.jpg" alt="">
+                <img class="reveal" src="images/2.jpg" alt="">
+                <img class="reveal" src="images/3.jpg" alt="">
+                <img class="reveal" src="images/4.jpg" alt="">
+                <img class="reveal" src="images/5.jpg" alt="">
+                <img class="reveal" src="images/6.jpg" alt="">
+                <img class="reveal" src="images/7.jpg" alt="">
+                <img class="reveal" src="images/8.jpg" alt="">
+                <img class="reveal" src="images/9.jpg" alt="">
+                <img class="reveal" src="images/10.jpg" alt="">
+                <img class="reveal" src="images/11.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+    <!-- container-two start -->
+     <div class="container-two">
+        <div class="container">
+            <h1>About This Project</h1>          
+
+            <p class="reveal p-tag">
+                I built this app as my first full-stack project after years of working as a front-end developer. It's designed to help you stay focused, organized, and in control of your tasks — without the clutter. Every feature was carefully crafted as part of my learning journey with Flask and Python
+            </p>
+
+            <a class="btn reveal" href="/support">Support This Project</a>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+    <!-- footer start -->
+     <footer>
+        <div class="container">
+            <p>
+                &copy; 2025 All rights reserved | 
+                <a class="user" target="_blank" href="https://umunufolio.online">
+                    UMUNU Odafe Peter
+                </a>                
+            </p>
+            <div class="social_li">
+                <a href="https://github.com/odafeumunu" target="_blank">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://x.com/umunu_odafe" target="_blank">
+                    <i class="ri-twitter-x-fill"></i>
+                </a>
+            </div>
+        </div>
+     </footer>
+    <!-- footer end -->
+     
+
+    <script>
+        window.addEventListener("scroll", reveal);
+
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 160;
+
+                if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+        }
+    </script>
+     
+
+
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

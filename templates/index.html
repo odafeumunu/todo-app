@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Doit 
+{% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% set list_items =[
+    {
+        "text": "Task <br> Management",
+        "class": "ri-file-list-3-fill",
+        "desc": "Stay in control of your to-dos with ease. Quickly add new tasks, make changes on the fly, and pin important items to keep them at the top of your list. Simple, fast, and intuitive task management — just the way it should be.",
+    },
+    {
+        "text": "Email <br> Reminders",
+        "class": "ri-timer-flash-fill",
+        "desc": "Never miss a deadline again. Get automatic email reminders 15 minutes before your task is due, so you can stay ahead and stress-free — even on your busiest days.",
+    },
+    {
+        "text": "Track your <br>  Tasks",
+        "class": "ri-database-fill",
+        "desc": "Visualize your productivity. Instantly see how many tasks you’ve completed, what’s still pending, and what’s next. Your progress, clearly laid out — all in one view.",
+    },
+    {
+        "text": "Upload  <br>  Profile Picture",
+        "class": "ri-camera-ai-fill",
+        "desc": "Personalize your experience. Upload a profile photo to make your dashboard feel more like yours. It’s a small touch that makes a big difference.",
+    },
+    ]
+%}
+
+
+{% set steps = [
+        {
+            "title": "Create an Account",
+            "desc": "Sign up with your email to get started instantly — no hassle, no waiting."
+        },
+        {
+            "title": "Add Your Tasks",
+            "desc": "Quickly create, edit, pin delete or even check task details to stay focused and organized."
+        },
+        {
+            "title": "Get Reminders",
+            "desc": "Receive automatic email reminders 15 minutes before a task is due. <br> 
+            Also on completion of every task, after clicking the checkbox beside the task, you get an email notication on task completion"
+        },
+        {
+            "title": "Track Your Progress",
+            "desc": "See your completed, pending, and total tasks — all in one clean view. <br>
+            Go to your profile and see your tasks progress"
+        },
+        {
+            "title": "Dark & Light Mode",
+            "desc": "Switch between Light and Dark themes effortlessly to match your environment and style. <br>
+            Whether you prefer a bright, clean look or a sleek, eye-friendly dark mode, 
+            your experience stays smooth and distraction-free — day or night."
+        }
+    ] 
+%}
+ 
+    
+{% block body%}
+
+    {% include "landing_header.html" %}
+
+    <!-- hero start -->
+     <div class="hero">
+        <div class="container">
+            <div class="left">
+                <h1>Do it. <br> No excuses.</h1>
+                <p>
+                    A clean task manager with reminders that help you stay ahead. <br>
+                    Plan your day, manage tasks, and get reminded — all in one place.
+                </p>
+                <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+            </div>
+        </div>
+     </div>
+    <!-- hero end -->
+
+    <!-- container-one start -->
+    <div class="container-one">
+        <div class="container">
+            {% for item in list_items %}
+                <!-- content start -->
+                <div class="content reveal">
+                    <div class="icon">
+                        <i class="{{ item.class }}"></i>
+                    </div>
+                    <h2>{{ item.text | safe }}</h2>
+                    <p>{{ item.desc }}</p>
+                </div>
+                <!-- content end -->
+            {% endfor %}
+        </div>
+    </div>
+    <!-- container-one end -->
+
+
+    <!-- container-two start -->
+     <div class="container-two">
+        <div class="container">
+            <h1>How It Works</h1>          
+
+            <div class="cont">
+                {% for step in steps %}
+                <div class="inner-cont reveal">
+                    <span>{{ loop.index }}</span>
+                    <h3>{{ step.title }}</h3>
+                    <p>{{ step.desc | safe}}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <a class="btn reveal" href="{{ url_for('register') }}">Get Started</a>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+    <!-- container-three start -->
+     <div class="container-three">
+        <div class="container">
+            <h1>How to use the App</h1>          
+
+            <div class="cont">
+                {% for item in range(1, 13) %}
+                    <img class="reveal" src="{{ url_for('static', filename='images/' ~ item ~ '.jpg') }}" alt="">
+                {% endfor %}
+            </div>
+
+            <a class="btn reveal" href="{{ url_for('register') }}" style="margin-top: 50px;">See it in action</a>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+
+    <!-- container-two start -->
+     <div class="container-two">
+        <div class="container">
+            <h1>About This Project</h1>          
+
+            <p class="reveal p-tag">
+                I built this app as my first full-stack project after years of working as a front-end developer. It's designed to help you stay focused, organized, and in control of your tasks — without the clutter. Every feature was carefully crafted as part of my learning journey with Flask and Python
+            </p>
+
+            <a class="btn reveal" href="{{ url_for('support') }}">Support This Project</a>
+        </div>
+    </div>
+    <!-- container-two end -->
+
+    <!-- footer start -->
+     <footer>
+        <div class="container">
+            <p>
+                Copyright &copy; {{current_year}} All rights reserved | 
+                <a class="user" target="_blank" href="https://umunufolio.online">
+                    UMUNU Odafe Peter
+                </a>                
+            </p>
+            <div class="social_li">
+                <a href="https://github.com/odafeumunu" target="_blank">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://x.com/umunu_odafe" target="_blank">
+                    <i class="ri-twitter-x-fill"></i>
+                </a>
+            </div>
+        </div>
+     </footer>
+    <!-- footer end -->
+
+    <script>
+        window.addEventListener("scroll", reveal);
+
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+    </script>
+     
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %} 

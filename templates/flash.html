@@ -1,0 +1,155 @@
+<div id="flash-container">
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div class="container">
+      <div class="flash-message {{ category }}">
+      <div class="flash-circle-wrapper">
+        <svg class="progress-ring" width="50" height="50">
+          <circle
+            class="progress-ring__circle"
+            stroke-width="4"
+            fill="transparent"
+            r="22"
+            cx="25"
+            cy="25" />
+        </svg>
+        <div class="flash-circle"></div>
+      </div>
+      <span class="flash-text">{{ message }}</span>
+    </div>
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+</div>
+
+<style>
+  #flash-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .flash-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .flash-message.hide {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  .flash-circle-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+
+  .flash-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .progress-ring {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .progress-ring__circle {
+    stroke-dasharray: 138;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 5s linear;
+  }
+
+  .flash-text {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+
+  }
+
+  /* === Type-Specific Styles === */
+
+  /* ✅ Success */
+  .flash-message.success .flash-circle {
+    background-color: #d4edda;
+  }
+  .flash-message.success .flash-text {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .flash-message.success .progress-ring__circle {
+    stroke: #28a745;
+  }
+
+  /* ❌ Error */
+  .flash-message.error .flash-circle {
+    background-color: #f8d7da;
+  }
+  .flash-message.error .flash-text {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  .flash-message.error .progress-ring__circle {
+    stroke: #dc3545;
+  }
+
+  /* ⚠️ Warning */
+  .flash-message.warning .flash-circle {
+    background-color: #fff3cd;
+  }
+  .flash-message.warning .flash-text {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  .flash-message.warning .progress-ring__circle {
+    stroke: #ffc107;
+  }
+
+  /* ℹ️ Info (Optional) */
+  .flash-message.info .flash-circle {
+    background-color: #d1ecf1;
+  }
+  .flash-message.info .flash-text {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  .flash-message.info .progress-ring__circle {
+    stroke: #17a2b8;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".flash-message").forEach((flash) => {
+      const ring = flash.querySelector(".progress-ring__circle");
+      const duration = 5000;
+      const radius = ring.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      ring.style.strokeDasharray = `${circumference} ${circumference}`;
+      ring.style.strokeDashoffset = "0";
+
+      setTimeout(() => {
+        ring.style.strokeDashoffset = `${circumference}`;
+      }, 100);
+
+      setTimeout(() => {
+        flash.classList.add("hide");
+        setTimeout(() => flash.remove(), 1000);
+      }, duration);
+    });
+  });
+</script>

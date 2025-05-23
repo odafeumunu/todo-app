@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Doit || Sign Up 
+{% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/log_reg.css') }}">
+{% endblock %}
+    
+{% block body%}
+    <div class="log-container">        
+        <div class="text">
+            <div class="container">
+                <h1>Already have an <br> account?</h1>
+                <p>Log in to continue where you left off.</p>
+                <a href="{{ url_for('login') }}" class="btn">Sign In</a>
+            </div>       
+        </div>
+        <div class="form">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">
+                    <img src="../static/images/logo.png" height="30px" alt="logo">
+                </a> 
+            </div>
+            <form action="{{ url_for('register') }}" method="post" novalidate>
+                <h2>Sign Up</h2>
+                {{ form.csrf_token }}
+
+                {% include "flash.html" %}
+                {{ form.name.label }}
+                <div class="input" id="inputField">
+                    <i class="ri-user-fill"></i>
+                    {{ form.name }} <br>
+                </div>
+                {% for error in form.name.errors %}
+                    <p class="error">{{error}}</p>
+                {% endfor %}
+
+                {{ form.email.label }}
+                <div class="input" id="inputField">
+                    <i class="ri-mail-fill"></i>
+                    {{ form.email }} 
+                </div>
+                {% for error in form.email.errors %}
+                    <p class="error">{{error}}</p>
+                {% endfor %}
+
+                {{ form.password.label }} 
+                <div class="input" id="inputField">
+                    <i class="ri-lock-fill"></i>
+                    {{ form.password }}
+                </div>  
+                <div class="show" onclick="showPassword()">
+                    <span id="eye">👁️</span>
+                    <span id="close_eye">🙈</span>
+                </div> 
+                {% for error in form.password.errors %}
+                    <p class="error">{{error}}</p>
+                {% endfor %}      
+
+                {{ form.submit(class='btn') }} 
+                
+
+                <p class="dislpay-in-media" style="margin-top: 20px;">Have an account? <a href="{{ url_for('login') }}" style="color: dodgerblue;">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/log-reg.js') }}"></script>
+{% endblock %}
