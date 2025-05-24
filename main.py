@@ -414,48 +414,55 @@ def complete_task(task_id):
 
 
 #! Task Reminder
-@scheduler.task('interval', id='reminder_job', minutes=1,  max_instances=1)
-def scheduled_reminder():
+def check_and_send_reminders():
+    now = datetime.now()
+    soon = now + timedelta(minutes=15)
+
+    upcoming_tasks = Task.query.filter(
+        and_(
+            Task.due_date <= soon,
+            Task.due_date > now,
+            Task.is_completed == False,
+            Task.reminder_sent == False
+        )
+    ).all()
+
+    for task in upcoming_tasks:
+        user = task.user
+        html_body = render_template("task-reminder.html", user_name=user.name, due_date=task.due_date, task_title=task.task)
+
+        message = Mail(
+            from_email=MY_EMAIL,
+            to_emails=user.email,
+            subject='⏰ Task Reminder',
+            html_content=html_body
+        )
+
+        try:
+            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+            response = sg.send(message)
+
+            if response.status_code in [200, 202]:
+                task.reminder_sent = True
+                db.session.add(task)
+                db.session.commit()
+                print(f'✅ Email sent to {user.email}! Status: {response.status_code}')
+            else:
+                print(f'❌ Email not sent to {user.email}. Status: {response.status_code}')
+
+        except Exception as e:
+            db.session.rollback()
+            print(f"❌ Failed to send email to {user.email}: {e}")
+
+            
+
+@app.route('/run-reminder')
+def run_reminder():
     with app.app_context():
-        now = datetime.now()
-        soon = now + timedelta(minutes=15)
-        
-        upcoming_tasks = Task.query.filter(
-            and_(
-                Task.due_date <= soon,
-                Task.due_date > now,
-                Task.is_completed == False,
-                Task.reminder_sent == False
-            )
-        ).all()
+        check_and_send_reminders()
+    return 'Reminders checked!'
 
-        for task in upcoming_tasks:
-            user = task.user
-            html_body = render_template("task-reminder.html", user_name=user.name, due_date=task.due_date, task_title=task.task)
-
-            message = Mail(
-                from_email=MY_EMAIL,
-                to_emails=user.email,
-                subject='⏰ Task Reminder',
-                html_content=html_body
-            )
-
-            try:
-                sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-                response = sg.send(message)
-
-                if response.status_code in [200, 202]:
-                    task.reminder_sent = True
-                    db.session.add(task)  # 👈 Ensure task is added to session
-                    db.session.commit()
-                    print(f'✅ Email sent to {user.email}! Status: {response.status_code}')
-                else:
-                    print(f'❌ Email not sent to {user.email}. Status: {response.status_code}')
-
-            except Exception as e:
-                db.session.rollback()
-                logging.error(f"❌ Failed to send email to {user.email}: {e}")
-
+    
 
 @app.route("/logout")
 @login_required

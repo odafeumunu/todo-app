@@ -1,0 +1,258 @@
+2025-05-24 00:26:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:27:35 WAT)" (scheduled at 2025-05-24 00:26:35.488236+01:00)
+2025-05-24 00:26:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:27:35 WAT)" executed successfully
+2025-05-24 00:27:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:28:24 WAT)" (scheduled at 2025-05-24 00:27:24.309789+01:00)
+2025-05-24 00:27:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:28:24 WAT)" executed successfully
+2025-05-24 00:27:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:28:35 WAT)" (scheduled at 2025-05-24 00:27:35.488236+01:00)
+2025-05-24 00:27:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:28:35 WAT)" executed successfully
+2025-05-24 00:28:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:29:24 WAT)" (scheduled at 2025-05-24 00:28:24.309789+01:00)
+2025-05-24 00:28:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:29:24 WAT)" executed successfully
+2025-05-24 00:28:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:29:35 WAT)" (scheduled at 2025-05-24 00:28:35.488236+01:00)
+2025-05-24 00:28:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:29:35 WAT)" executed successfully
+2025-05-24 00:29:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:30:24 WAT)" (scheduled at 2025-05-24 00:29:24.309789+01:00)
+2025-05-24 00:29:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:30:24 WAT)" executed successfully
+2025-05-24 00:29:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:30:35 WAT)" (scheduled at 2025-05-24 00:29:35.488236+01:00)
+2025-05-24 00:29:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:30:35 WAT)" executed successfully
+2025-05-24 00:30:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:31:24 WAT)" (scheduled at 2025-05-24 00:30:24.309789+01:00)
+2025-05-24 00:30:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:31:24 WAT)" executed successfully
+2025-05-24 00:30:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:31:35 WAT)" (scheduled at 2025-05-24 00:30:35.488236+01:00)
+2025-05-24 00:30:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:31:35 WAT)" executed successfully
+2025-05-24 00:31:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:32:24 WAT)" (scheduled at 2025-05-24 00:31:24.309789+01:00)
+2025-05-24 00:31:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:32:24 WAT)" executed successfully
+2025-05-24 00:31:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:32:35 WAT)" (scheduled at 2025-05-24 00:31:35.488236+01:00)
+2025-05-24 00:31:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:32:35 WAT)" executed successfully
+2025-05-24 00:32:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:33:24 WAT)" (scheduled at 2025-05-24 00:32:24.309789+01:00)
+2025-05-24 00:32:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:33:24 WAT)" executed successfully
+2025-05-24 00:32:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:33:35 WAT)" (scheduled at 2025-05-24 00:32:35.488236+01:00)
+2025-05-24 00:32:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:33:35 WAT)" executed successfully
+2025-05-24 00:33:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:34:24 WAT)" (scheduled at 2025-05-24 00:33:24.309789+01:00)
+2025-05-24 00:33:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:34:24 WAT)" executed successfully
+2025-05-24 00:33:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:34:35 WAT)" (scheduled at 2025-05-24 00:33:35.488236+01:00)
+2025-05-24 00:33:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:34:35 WAT)" executed successfully
+2025-05-24 00:34:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:35:24 WAT)" (scheduled at 2025-05-24 00:34:24.309789+01:00)
+2025-05-24 00:34:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:35:24 WAT)" executed successfully
+2025-05-24 00:34:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:35:35 WAT)" (scheduled at 2025-05-24 00:34:35.488236+01:00)
+2025-05-24 00:34:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:35:35 WAT)" executed successfully
+2025-05-24 00:35:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:36:24 WAT)" (scheduled at 2025-05-24 00:35:24.309789+01:00)
+2025-05-24 00:35:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:36:24 WAT)" executed successfully
+2025-05-24 00:35:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:36:35 WAT)" (scheduled at 2025-05-24 00:35:35.488236+01:00)
+2025-05-24 00:35:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:36:35 WAT)" executed successfully
+2025-05-24 00:36:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:37:24 WAT)" (scheduled at 2025-05-24 00:36:24.309789+01:00)
+2025-05-24 00:36:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:37:24 WAT)" executed successfully
+2025-05-24 00:36:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:37:35 WAT)" (scheduled at 2025-05-24 00:36:35.488236+01:00)
+2025-05-24 00:36:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:37:35 WAT)" executed successfully
+2025-05-24 00:37:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:38:24 WAT)" (scheduled at 2025-05-24 00:37:24.309789+01:00)
+2025-05-24 00:37:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:38:24 WAT)" executed successfully
+2025-05-24 00:37:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:38:35 WAT)" (scheduled at 2025-05-24 00:37:35.488236+01:00)
+2025-05-24 00:37:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:38:35 WAT)" executed successfully
+2025-05-24 00:38:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:39:24 WAT)" (scheduled at 2025-05-24 00:38:24.309789+01:00)
+2025-05-24 00:38:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:39:24 WAT)" executed successfully
+2025-05-24 00:38:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:39:35 WAT)" (scheduled at 2025-05-24 00:38:35.488236+01:00)
+2025-05-24 00:38:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:39:35 WAT)" executed successfully
+2025-05-24 00:39:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:40:24 WAT)" (scheduled at 2025-05-24 00:39:24.309789+01:00)
+2025-05-24 00:39:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:40:24 WAT)" executed successfully
+2025-05-24 00:39:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:40:35 WAT)" (scheduled at 2025-05-24 00:39:35.488236+01:00)
+2025-05-24 00:39:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:40:35 WAT)" executed successfully
+2025-05-24 00:40:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:41:24 WAT)" (scheduled at 2025-05-24 00:40:24.309789+01:00)
+2025-05-24 00:40:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:41:24 WAT)" executed successfully
+2025-05-24 00:40:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:41:35 WAT)" (scheduled at 2025-05-24 00:40:35.488236+01:00)
+2025-05-24 00:40:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:41:35 WAT)" executed successfully
+2025-05-24 00:41:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:42:24 WAT)" (scheduled at 2025-05-24 00:41:24.309789+01:00)
+2025-05-24 00:41:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:42:24 WAT)" executed successfully
+2025-05-24 00:41:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:42:35 WAT)" (scheduled at 2025-05-24 00:41:35.488236+01:00)
+2025-05-24 00:41:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:42:35 WAT)" executed successfully
+2025-05-24 00:42:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:43:24 WAT)" (scheduled at 2025-05-24 00:42:24.309789+01:00)
+2025-05-24 00:42:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:43:24 WAT)" executed successfully
+2025-05-24 00:42:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:43:35 WAT)" (scheduled at 2025-05-24 00:42:35.488236+01:00)
+2025-05-24 00:42:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:43:35 WAT)" executed successfully
+2025-05-24 00:43:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:44:24 WAT)" (scheduled at 2025-05-24 00:43:24.309789+01:00)
+2025-05-24 00:43:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:44:24 WAT)" executed successfully
+2025-05-24 00:43:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:44:35 WAT)" (scheduled at 2025-05-24 00:43:35.488236+01:00)
+2025-05-24 00:43:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:44:35 WAT)" executed successfully
+2025-05-24 00:44:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:45:24 WAT)" (scheduled at 2025-05-24 00:44:24.309789+01:00)
+2025-05-24 00:44:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:45:24 WAT)" executed successfully
+2025-05-24 00:44:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:45:35 WAT)" (scheduled at 2025-05-24 00:44:35.488236+01:00)
+2025-05-24 00:44:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:45:35 WAT)" executed successfully
+2025-05-24 00:45:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:46:24 WAT)" (scheduled at 2025-05-24 00:45:24.309789+01:00)
+2025-05-24 00:45:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:46:24 WAT)" executed successfully
+2025-05-24 00:45:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:46:35 WAT)" (scheduled at 2025-05-24 00:45:35.488236+01:00)
+2025-05-24 00:45:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:46:35 WAT)" executed successfully
+2025-05-24 00:46:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:47:24 WAT)" (scheduled at 2025-05-24 00:46:24.309789+01:00)
+2025-05-24 00:46:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:47:24 WAT)" executed successfully
+2025-05-24 00:46:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:47:35 WAT)" (scheduled at 2025-05-24 00:46:35.488236+01:00)
+2025-05-24 00:46:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:47:35 WAT)" executed successfully
+2025-05-24 00:47:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:48:24 WAT)" (scheduled at 2025-05-24 00:47:24.309789+01:00)
+2025-05-24 00:47:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:48:24 WAT)" executed successfully
+2025-05-24 00:47:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:48:35 WAT)" (scheduled at 2025-05-24 00:47:35.488236+01:00)
+2025-05-24 00:47:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:48:35 WAT)" executed successfully
+2025-05-24 00:48:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:49:24 WAT)" (scheduled at 2025-05-24 00:48:24.309789+01:00)
+2025-05-24 00:48:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:49:24 WAT)" executed successfully
+2025-05-24 00:48:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:49:35 WAT)" (scheduled at 2025-05-24 00:48:35.488236+01:00)
+2025-05-24 00:48:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:49:35 WAT)" executed successfully
+2025-05-24 00:49:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:50:24 WAT)" (scheduled at 2025-05-24 00:49:24.309789+01:00)
+2025-05-24 00:49:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:50:24 WAT)" executed successfully
+2025-05-24 00:49:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:50:35 WAT)" (scheduled at 2025-05-24 00:49:35.488236+01:00)
+2025-05-24 00:49:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:50:35 WAT)" executed successfully
+2025-05-24 00:50:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:51:24 WAT)" (scheduled at 2025-05-24 00:50:24.309789+01:00)
+2025-05-24 00:50:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:51:24 WAT)" executed successfully
+2025-05-24 00:50:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:51:35 WAT)" (scheduled at 2025-05-24 00:50:35.488236+01:00)
+2025-05-24 00:50:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:51:35 WAT)" executed successfully
+2025-05-24 00:51:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:51:24 WAT)" (scheduled at 2025-05-24 00:51:24.309789+01:00)
+2025-05-24 00:51:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:52:24 WAT)" executed successfully
+2025-05-24 00:51:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:52:35 WAT)" (scheduled at 2025-05-24 00:51:35.488236+01:00)
+2025-05-24 00:51:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:52:35 WAT)" executed successfully
+2025-05-24 00:52:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:53:24 WAT)" (scheduled at 2025-05-24 00:52:24.309789+01:00)
+2025-05-24 00:52:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:53:24 WAT)" executed successfully
+2025-05-24 00:52:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:53:35 WAT)" (scheduled at 2025-05-24 00:52:35.488236+01:00)
+2025-05-24 00:52:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:53:35 WAT)" executed successfully
+2025-05-24 00:53:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:54:24 WAT)" (scheduled at 2025-05-24 00:53:24.309789+01:00)
+2025-05-24 00:53:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:54:24 WAT)" executed successfully
+2025-05-24 00:53:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:54:35 WAT)" (scheduled at 2025-05-24 00:53:35.488236+01:00)
+2025-05-24 00:53:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:54:35 WAT)" executed successfully
+2025-05-24 00:54:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:55:24 WAT)" (scheduled at 2025-05-24 00:54:24.309789+01:00)
+2025-05-24 00:54:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:55:24 WAT)" executed successfully
+2025-05-24 00:54:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:55:35 WAT)" (scheduled at 2025-05-24 00:54:35.488236+01:00)
+2025-05-24 00:54:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:55:35 WAT)" executed successfully
+2025-05-24 00:55:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:56:24 WAT)" (scheduled at 2025-05-24 00:55:24.309789+01:00)
+2025-05-24 00:55:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:56:24 WAT)" executed successfully
+2025-05-24 00:55:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:56:35 WAT)" (scheduled at 2025-05-24 00:55:35.488236+01:00)
+2025-05-24 00:55:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:56:35 WAT)" executed successfully
+2025-05-24 00:56:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:57:24 WAT)" (scheduled at 2025-05-24 00:56:24.309789+01:00)
+2025-05-24 00:56:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:57:24 WAT)" executed successfully
+2025-05-24 00:56:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:57:35 WAT)" (scheduled at 2025-05-24 00:56:35.488236+01:00)
+2025-05-24 00:56:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:57:35 WAT)" executed successfully
+2025-05-24 00:57:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:58:24 WAT)" (scheduled at 2025-05-24 00:57:24.309789+01:00)
+2025-05-24 00:57:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:58:24 WAT)" executed successfully
+2025-05-24 00:57:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:58:35 WAT)" (scheduled at 2025-05-24 00:57:35.488236+01:00)
+2025-05-24 00:57:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:58:35 WAT)" executed successfully
+2025-05-24 00:58:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:59:24 WAT)" (scheduled at 2025-05-24 00:58:24.309789+01:00)
+2025-05-24 00:58:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:59:24 WAT)" executed successfully
+2025-05-24 00:58:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:59:35 WAT)" (scheduled at 2025-05-24 00:58:35.488236+01:00)
+2025-05-24 00:58:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 00:59:35 WAT)" executed successfully
+2025-05-24 00:59:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:24 WAT)" (scheduled at 2025-05-24 00:59:24.309789+01:00)
+2025-05-24 00:59:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:24 WAT)" executed successfully
+2025-05-24 00:59:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:35 WAT)" (scheduled at 2025-05-24 00:59:35.488236+01:00)
+2025-05-24 00:59:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:35 WAT)" executed successfully
+2025-05-24 01:00:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:24 WAT)" (scheduled at 2025-05-24 01:00:24.309789+01:00)
+2025-05-24 01:00:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:01:24 WAT)" executed successfully
+2025-05-24 01:00:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:00:35 WAT)" (scheduled at 2025-05-24 01:00:35.488236+01:00)
+2025-05-24 01:00:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:01:35 WAT)" executed successfully
+2025-05-24 01:01:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:02:24 WAT)" (scheduled at 2025-05-24 01:01:24.309789+01:00)
+2025-05-24 01:01:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:02:24 WAT)" executed successfully
+2025-05-24 01:01:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:02:35 WAT)" (scheduled at 2025-05-24 01:01:35.488236+01:00)
+2025-05-24 01:01:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:02:35 WAT)" executed successfully
+2025-05-24 01:02:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:03:24 WAT)" (scheduled at 2025-05-24 01:02:24.309789+01:00)
+2025-05-24 01:02:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:03:24 WAT)" executed successfully
+2025-05-24 01:02:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:03:35 WAT)" (scheduled at 2025-05-24 01:02:35.488236+01:00)
+2025-05-24 01:02:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:03:35 WAT)" executed successfully
+2025-05-24 01:03:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:04:24 WAT)" (scheduled at 2025-05-24 01:03:24.309789+01:00)
+2025-05-24 01:03:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:04:24 WAT)" executed successfully
+2025-05-24 01:03:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:04:35 WAT)" (scheduled at 2025-05-24 01:03:35.488236+01:00)
+2025-05-24 01:03:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:04:35 WAT)" executed successfully
+2025-05-24 01:04:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:05:24 WAT)" (scheduled at 2025-05-24 01:04:24.309789+01:00)
+2025-05-24 01:04:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:05:24 WAT)" executed successfully
+2025-05-24 01:04:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:05:35 WAT)" (scheduled at 2025-05-24 01:04:35.488236+01:00)
+2025-05-24 01:04:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:05:35 WAT)" executed successfully
+2025-05-24 01:05:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:06:24 WAT)" (scheduled at 2025-05-24 01:05:24.309789+01:00)
+2025-05-24 01:05:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:06:24 WAT)" executed successfully
+2025-05-24 01:05:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:06:35 WAT)" (scheduled at 2025-05-24 01:05:35.488236+01:00)
+2025-05-24 01:05:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:06:35 WAT)" executed successfully
+2025-05-24 01:06:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:07:24 WAT)" (scheduled at 2025-05-24 01:06:24.309789+01:00)
+2025-05-24 01:06:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:07:24 WAT)" executed successfully
+2025-05-24 01:06:35 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:07:35 WAT)" (scheduled at 2025-05-24 01:06:35.488236+01:00)
+2025-05-24 01:06:35 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:07:35 WAT)" executed successfully
+2025-05-24 01:07:14 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\main.py', reloading
+2025-05-24 01:07:19 INFO:  * Restarting with stat
+2025-05-24 01:07:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:07:24 WAT)" (scheduled at 2025-05-24 01:07:24.309789+01:00)
+2025-05-24 01:07:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:08:24 WAT)" executed successfully
+2025-05-24 01:07:34 INFO: Scheduler started
+2025-05-24 01:07:34 INFO: Added job "scheduled_reminder" to job store "default"
+2025-05-24 01:07:34 WARNING:  * Debugger is active!
+2025-05-24 01:07:35 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 01:08:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:09:24 WAT)" (scheduled at 2025-05-24 01:08:24.309789+01:00)
+2025-05-24 01:08:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:09:24 WAT)" executed successfully
+2025-05-24 01:08:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:08:34 WAT)" (scheduled at 2025-05-24 01:08:34.378187+01:00)
+2025-05-24 01:08:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:09:34 WAT)" executed successfully
+2025-05-24 01:09:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:10:24 WAT)" (scheduled at 2025-05-24 01:09:24.309789+01:00)
+2025-05-24 01:09:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:10:24 WAT)" executed successfully
+2025-05-24 01:09:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:10:34 WAT)" (scheduled at 2025-05-24 01:09:34.378187+01:00)
+2025-05-24 01:09:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:10:34 WAT)" executed successfully
+2025-05-24 01:10:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:11:24 WAT)" (scheduled at 2025-05-24 01:10:24.309789+01:00)
+2025-05-24 01:10:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:11:24 WAT)" executed successfully
+2025-05-24 01:10:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:11:34 WAT)" (scheduled at 2025-05-24 01:10:34.378187+01:00)
+2025-05-24 01:10:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:11:34 WAT)" executed successfully
+2025-05-24 01:11:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:12:24 WAT)" (scheduled at 2025-05-24 01:11:24.309789+01:00)
+2025-05-24 01:11:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:12:24 WAT)" executed successfully
+2025-05-24 01:11:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:12:34 WAT)" (scheduled at 2025-05-24 01:11:34.378187+01:00)
+2025-05-24 01:11:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:12:34 WAT)" executed successfully
+2025-05-24 01:12:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:13:24 WAT)" (scheduled at 2025-05-24 01:12:24.309789+01:00)
+2025-05-24 01:12:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:13:24 WAT)" executed successfully
+2025-05-24 01:12:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:13:34 WAT)" (scheduled at 2025-05-24 01:12:34.378187+01:00)
+2025-05-24 01:12:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:13:34 WAT)" executed successfully
+2025-05-24 01:13:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:14:24 WAT)" (scheduled at 2025-05-24 01:13:24.309789+01:00)
+2025-05-24 01:13:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:14:24 WAT)" executed successfully
+2025-05-24 01:13:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:14:34 WAT)" (scheduled at 2025-05-24 01:13:34.378187+01:00)
+2025-05-24 01:13:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:14:34 WAT)" executed successfully
+2025-05-24 01:14:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:15:24 WAT)" (scheduled at 2025-05-24 01:14:24.309789+01:00)
+2025-05-24 01:14:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:15:24 WAT)" executed successfully
+2025-05-24 01:14:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:15:34 WAT)" (scheduled at 2025-05-24 01:14:34.378187+01:00)
+2025-05-24 01:14:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:15:34 WAT)" executed successfully
+2025-05-24 01:15:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:16:24 WAT)" (scheduled at 2025-05-24 01:15:24.309789+01:00)
+2025-05-24 01:15:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:16:24 WAT)" executed successfully
+2025-05-24 01:15:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:16:34 WAT)" (scheduled at 2025-05-24 01:15:34.378187+01:00)
+2025-05-24 01:15:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:16:34 WAT)" executed successfully
+2025-05-24 01:16:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:17:24 WAT)" (scheduled at 2025-05-24 01:16:24.309789+01:00)
+2025-05-24 01:16:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:17:24 WAT)" executed successfully
+2025-05-24 01:16:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:17:34 WAT)" (scheduled at 2025-05-24 01:16:34.378187+01:00)
+2025-05-24 01:16:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:17:34 WAT)" executed successfully
+2025-05-24 01:17:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:18:24 WAT)" (scheduled at 2025-05-24 01:17:24.309789+01:00)
+2025-05-24 01:17:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:18:24 WAT)" executed successfully
+2025-05-24 01:17:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:18:34 WAT)" (scheduled at 2025-05-24 01:17:34.378187+01:00)
+2025-05-24 01:17:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:18:34 WAT)" executed successfully
+2025-05-24 01:18:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:19:24 WAT)" (scheduled at 2025-05-24 01:18:24.309789+01:00)
+2025-05-24 01:18:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:19:24 WAT)" executed successfully
+2025-05-24 01:18:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:19:34 WAT)" (scheduled at 2025-05-24 01:18:34.378187+01:00)
+2025-05-24 01:18:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:19:34 WAT)" executed successfully
+2025-05-24 01:19:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:20:24 WAT)" (scheduled at 2025-05-24 01:19:24.309789+01:00)
+2025-05-24 01:19:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:20:24 WAT)" executed successfully
+2025-05-24 01:19:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:20:34 WAT)" (scheduled at 2025-05-24 01:19:34.378187+01:00)
+2025-05-24 01:19:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:20:34 WAT)" executed successfully
+2025-05-24 01:20:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:21:24 WAT)" (scheduled at 2025-05-24 01:20:24.309789+01:00)
+2025-05-24 01:20:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:21:24 WAT)" executed successfully
+2025-05-24 01:20:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:21:34 WAT)" (scheduled at 2025-05-24 01:20:34.378187+01:00)
+2025-05-24 01:20:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:21:34 WAT)" executed successfully
+2025-05-24 01:21:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:22:24 WAT)" (scheduled at 2025-05-24 01:21:24.309789+01:00)
+2025-05-24 01:21:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:22:24 WAT)" executed successfully
+2025-05-24 01:21:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:22:34 WAT)" (scheduled at 2025-05-24 01:21:34.378187+01:00)
+2025-05-24 01:21:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:22:34 WAT)" executed successfully
+2025-05-24 01:22:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:23:24 WAT)" (scheduled at 2025-05-24 01:22:24.309789+01:00)
+2025-05-24 01:22:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:23:24 WAT)" executed successfully
+2025-05-24 01:22:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:23:34 WAT)" (scheduled at 2025-05-24 01:22:34.378187+01:00)
+2025-05-24 01:22:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:23:34 WAT)" executed successfully
+2025-05-24 01:23:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:24:24 WAT)" (scheduled at 2025-05-24 01:23:24.309789+01:00)
+2025-05-24 01:23:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:24:24 WAT)" executed successfully
+2025-05-24 01:23:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:24:34 WAT)" (scheduled at 2025-05-24 01:23:34.378187+01:00)
+2025-05-24 01:23:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:24:34 WAT)" executed successfully
+2025-05-24 01:24:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:25:24 WAT)" (scheduled at 2025-05-24 01:24:24.309789+01:00)
+2025-05-24 01:24:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:25:24 WAT)" executed successfully
+2025-05-24 01:24:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:25:34 WAT)" (scheduled at 2025-05-24 01:24:34.378187+01:00)
+2025-05-24 01:24:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:25:34 WAT)" executed successfully
+2025-05-24 01:25:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:26:24 WAT)" (scheduled at 2025-05-24 01:25:24.309789+01:00)
+2025-05-24 01:25:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:26:24 WAT)" executed successfully
+2025-05-24 01:25:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:26:34 WAT)" (scheduled at 2025-05-24 01:25:34.378187+01:00)
+2025-05-24 01:25:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:26:34 WAT)" executed successfully
+2025-05-24 01:26:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:27:24 WAT)" (scheduled at 2025-05-24 01:26:24.309789+01:00)
+2025-05-24 01:26:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:27:24 WAT)" executed successfully
+2025-05-24 01:26:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:27:34 WAT)" (scheduled at 2025-05-24 01:26:34.378187+01:00)
+2025-05-24 01:26:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:27:34 WAT)" executed successfully
+2025-05-24 01:27:24 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:28:24 WAT)" (scheduled at 2025-05-24 01:27:24.309789+01:00)
+2025-05-24 01:27:24 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:28:24 WAT)" executed successfully
+2025-05-24 01:27:34 INFO: Running job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:28:34 WAT)" (scheduled at 2025-05-24 01:27:34.378187+01:00)
+2025-05-24 01:27:34 INFO: Job "scheduled_reminder (trigger: interval[0:01:00], next run at: 2025-05-24 01:28:34 WAT)" executed successfully
+2025-05-24 01:27:40 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\main.py', reloading
+2025-05-24 01:27:42 INFO:  * Restarting with stat
+2025-05-24 01:28:01 INFO: Scheduler started
+2025-05-24 01:28:01 INFO: Added job "scheduled_reminder" to job store "default"
+2025-05-24 01:28:01 WARNING:  * Debugger is active!
+2025-05-24 01:28:01 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 01:28:17 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\main.py', reloading
+2025-05-24 01:28:18 INFO:  * Restarting with stat
