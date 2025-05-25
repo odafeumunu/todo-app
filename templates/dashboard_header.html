@@ -21,7 +21,7 @@
                 {% if user.profile_pic %}
                     <img src="{{ url_for('static', filename='profile_pics/' + user.profile_pic) }}" alt="profile" class="profile-pic" />
                 {% else %}
-                    <img src="{{ url_for('static', filename='images/user_profile.png') }}" alt="profile" class="profile-pic" />
+                    <i class="ri-user-fill"></i>
                 {% endif %}
             </a>
             <div class="toggle s-screen" id="toggle" onclick="openNav()">

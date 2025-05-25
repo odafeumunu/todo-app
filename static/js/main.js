@@ -87,7 +87,7 @@ document.querySelectorAll(".flex-te").forEach((taskBlock) => {
   // Details
   const openBtn = taskBlock.querySelector(".open-details");
   const modal = taskBlock.querySelector(".details-modal");
-  const closeBtn = modal?.querySelector(".close");
+  const closeBtn = modal.querySelector(".close");
 
   if (openBtn && modal && closeBtn) {
     openBtn.addEventListener("click", (e) => {
@@ -103,8 +103,8 @@ document.querySelectorAll(".flex-te").forEach((taskBlock) => {
   // Delete
   const deleteBtn = taskBlock.querySelector(".delete-task");
   const delModal = taskBlock.querySelector(".delete-modal");
-  const closeDel = delModal?.querySelector(".close");
-  const backBtn = delModal?.querySelector(".db-back");
+  const closeDel = delModal.querySelector(".close");
+  const backBtn = delModal.querySelector(".db-back");
 
   if (deleteBtn && delModal && closeDel && backBtn) {
     deleteBtn.addEventListener("click", (e) => {
@@ -124,9 +124,9 @@ document.querySelectorAll(".flex-te").forEach((taskBlock) => {
   // Edit
   const editBtn = taskBlock.querySelector(".edit-task");
   const editModal = taskBlock.querySelector(".edit-modal");
-  const closeEdit = editModal?.querySelector(".close");
-  const taskInput = editModal?.querySelector("input[name='add_task']");
-  const dueDateInput = editModal?.querySelector("input[name='due_date']");
+  const closeEdit = editModal.querySelector(".close");
+  const taskInput = editModal.querySelector("input[name='add_task']");
+  const dueDateInput = editModal.querySelector("input[name='due_date']");
 
   if (editBtn && editModal && closeEdit) {
     editBtn.addEventListener("click", (e) => {
@@ -135,7 +135,7 @@ document.querySelectorAll(".flex-te").forEach((taskBlock) => {
       const dueDate = editBtn.getAttribute("data-due-date");
 
       if (taskInput) taskInput.value = taskText;
-      if (dueDateInput) dueDateInput.value = dueDate;
+      if (dueDateInput) dueDateInput.value = dueDate; 
 
       editModal.style.display = "block";
     });

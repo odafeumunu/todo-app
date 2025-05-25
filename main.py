@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, flash, request
+import pytz
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
@@ -9,7 +10,7 @@ from sqlalchemy.exc import IntegrityError
 import os
 from dotenv import load_dotenv
 from forms import ImageUploadForm, NewPasswordForm, Registration, Login, AddTask, CompleteTaskForm, ResetPassword
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from flask_apscheduler import APScheduler
 from itsdangerous import URLSafeTimedSerializer, BadSignature, SignatureExpired 
 from sendgrid import SendGridAPIClient
@@ -34,7 +35,6 @@ def allowed_file(filename):
 
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
 
 
 logging.basicConfig(
@@ -108,6 +108,7 @@ class Task(db.Model):
     is_completed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     is_pinned: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     reminder_sent: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    time_zone_offset: Mapped[int] = mapped_column(Integer, nullable=False)
 
 
 with app.app_context():
@@ -126,9 +127,8 @@ scheduler.start()
 @app.route("/") 
 def home():
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
-    
-    return render_template("index.html", current_year=datetime.now().year)
+        return redirect(url_for('dashboard'))    
+    return render_template("index.html", current_year=datetime.now(pytz.utc).year)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -144,15 +144,16 @@ def register():
                 email = form.email.data,
                 name = form.name.data,
                 password = password_hash,
-                date_joined = datetime.now()
+                date_joined = datetime.now(pytz.utc)
             )
             db.session.add(new_user)
             db.session.commit()
 
             login_user(new_user)
-            return redirect(url_for("dashboard"))
+            flash("You've success registered. Login", "success")
+            return redirect(url_for("login"))
         except IntegrityError:
-            flash("This email already exists")
+            flash("This email already exists", "warning")
             return redirect(url_for("register"))
     return render_template("register.html", form=form)
 
@@ -257,37 +258,79 @@ def dashboard():
     form = AddTask()
     if form.validate_on_submit():
         my_task = form.add_task.data
-        date = form.due_date.data
-        now = datetime.now()
+        local_time = form.due_date.data
+        timezone_offset = int(form.timezone_offset.data)
+        utc_time = local_time - timedelta(minutes=-timezone_offset)
 
-        if date < now:
-            flash("Due date cannot be in the past", "error")  
-            return redirect(url_for("dashboard"))  
-        else:
-            new_task = Task(
-                user_id=current_user.id,
-                task = my_task,
-                due_date = date,
-                created_at = now,
-            )
-            db.session.add(new_task)
+        # Make UTC time timezone-aware
+        utc_time = utc_time.replace(tzinfo=pytz.utc)
 
-            current_user.tasks_added += 1
+        now_utc = datetime.now(pytz.utc)
+        if utc_time < now_utc:
+            flash("Due date cannot be in the past", "error")
+            return redirect(url_for("dashboard"))
 
-            db.session.commit()   
-            flash("Task sucessfully added", "success")     
-            return redirect(url_for("dashboard"))   
+        new_task = Task(
+            user_id=current_user.id,
+            task=my_task,
+            due_date=utc_time,
+            created_at=now_utc,
+            time_zone_offset=timezone_offset
+        )
+
+        db.session.add(new_task)
+        current_user.tasks_added += 1
+        db.session.commit()
+
+        flash("Task successfully added", "success")
+        return redirect(url_for("dashboard"))
+
     stmt = select(Task).where(Task.user_id == current_user.id)
     task_row = db.session.scalars(stmt).all()
+    
+    for task in task_row:
+        offset_timedelta = timedelta(minutes=-task.time_zone_offset)
+        utc_due_date = task.due_date
+        utc_created_at = task.created_at
+        utc_completed_at = task.completed_at
+        task.local_due_date = (utc_due_date + offset_timedelta)
+        task.local_created_at = (utc_created_at + offset_timedelta)
+
+        if task.completed_at:
+            task.local_time = (utc_completed_at + offset_timedelta)
+        else:
+            task.local_time = None
+       
+
     complete_forms = {task.id: CompleteTaskForm() for task in task_row}
     first_name = current_user.name.split(" ")[0]
-    return render_template("dashboard.html", active_page="dashboard", name=first_name, form=form, user = current_user, tasks=task_row, complete_forms=complete_forms)
+    return render_template(
+        "dashboard.html",
+        active_page="dashboard",
+        name=first_name,
+        form=form,
+        user=current_user,
+        tasks=task_row,
+        complete_forms=complete_forms,
+    )
+
 
 
 @app.route("/profile")
 @login_required
 def user_profile():
-    return render_template("user-profile.html", user = current_user, active_page="profile", form=ImageUploadForm())
+    total_tasks = Task.query.filter_by(user_id=current_user.id).count()
+    completed_tasks = Task.query.filter_by(user_id=current_user.id, is_completed=True).count()
+    pending_tasks = total_tasks - completed_tasks
+    return render_template(
+        "user-profile.html", 
+        user = current_user, 
+        active_page="profile", 
+        total_tasks=total_tasks,
+        completed_tasks=completed_tasks,
+        pending_tasks=pending_tasks, 
+        form=ImageUploadForm()
+        )
 
 
 #! File upload
@@ -330,28 +373,46 @@ def support():
 def delete(task_id):
     task = db.get_or_404(Task, task_id)
     db.session.delete(task)
+
     db.session.commit()
     flash("Task deleted.", "error") 
     return redirect(url_for('dashboard'))
+
 
 
 @app.route("/edit/<int:task_id>", methods=["GET", "POST"])
 @login_required
 def edit(task_id):
     user_task = db.get_or_404(Task, task_id)
+
+    timezone_offset = user_task.time_zone_offset  
+    utc_time = user_task.due_date
+    offset_timedelta = timedelta(minutes=timezone_offset)  # Offset is in minutes
+    local_time = utc_time + offset_timedelta
+    
     edit_form = AddTask(
         user_id=user_task.user_id,
-        task = user_task.task,
-        due_date = user_task.due_date,
-        created_at = user_task.created_at,
+        task=user_task.task,
+        due_date=local_time,  # Pass the local time to the form
+        created_at=user_task.created_at,
     )
+
     if edit_form.validate_on_submit():
+        updated_local_time = edit_form.due_date.data  
+        offset = timezone(timedelta(minutes=-timezone_offset)) 
+        aware_local_time = updated_local_time.replace(tzinfo=offset)
+        updated_utc_time = aware_local_time.astimezone(timezone.utc)
+
+        # Save updated values
         user_task.task = edit_form.add_task.data
-        user_task.due_date = edit_form.due_date.data
-        db.session.commit() 
-        flash("Task sucessfully updated", "success")
-        return redirect(url_for('dashboard')) 
+        user_task.due_date = updated_utc_time
+        db.session.commit()
+
+        flash("Task successfully updated", "success")
+        return redirect(url_for('dashboard'))    
     return redirect(url_for('dashboard'))
+    
+
 
 
 @app.route("/pinned/<int:task_id>")
@@ -381,9 +442,7 @@ def complete_task(task_id):
     user_task = db.get_or_404(Task, task_id)
 
     user_task.is_completed = True
-    user_task.completed_at = datetime.now() 
-
-    current_user.tasks_completed += 1
+    user_task.completed_at = datetime.now(pytz.utc)
 
     db.session.commit()
 
@@ -404,24 +463,25 @@ def complete_task(task_id):
         sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)  
         print(f'✅ Email sent! Status: {response.status_code}')   
-        flash("Task marked as complete", "success")
-        return redirect(url_for("dashboard"))       
+         
     except Exception as e:
         print(f'❌ Error: {str(e)}')
         return f'❌ Error: {str(e)}'
+    flash("Task marked as complete", "success")
+    return redirect(url_for("dashboard"))
     
 
 
 
 #! Task Reminder
 def check_and_send_reminders():
-    now = datetime.now()
-    soon = now + timedelta(minutes=15)
+    now_utc = datetime.now(pytz.utc)
+    soon_utc = now_utc + timedelta(minutes=15)
 
     upcoming_tasks = Task.query.filter(
         and_(
-            Task.due_date <= soon,
-            Task.due_date > now,
+            Task.due_date <= soon_utc,
+            Task.due_date > now_utc,
             Task.is_completed == False,
             Task.reminder_sent == False
         )
@@ -429,7 +489,12 @@ def check_and_send_reminders():
 
     for task in upcoming_tasks:
         user = task.user
-        html_body = render_template("task-reminder.html", user_name=user.name, due_date=task.due_date, task_title=task.task)
+
+        offset_timedelta = timedelta(minutes=-task.time_zone_offset)
+        utc_due_date = task.due_date
+        task.local_due_date = (utc_due_date + offset_timedelta)
+
+        html_body = render_template("task-reminder.html", user_name=user.name, due_date=task.local_due_date, task_title=task.task)
 
         message = Mail(
             from_email=MY_EMAIL,
@@ -454,13 +519,13 @@ def check_and_send_reminders():
             db.session.rollback()
             print(f"❌ Failed to send email to {user.email}: {e}")
 
+        
             
 
 @app.route('/run-reminder')
 def run_reminder():
     with app.app_context():
         check_and_send_reminders()
-    return 'Reminders checked!'
 
     
 

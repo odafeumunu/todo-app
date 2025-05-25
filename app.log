@@ -256,3 +256,352 @@
 2025-05-24 01:28:01 INFO:  * Debugger PIN: 107-040-484
 2025-05-24 01:28:17 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\main.py', reloading
 2025-05-24 01:28:18 INFO:  * Restarting with stat
+2025-05-24 15:46:18 INFO: Scheduler started
+2025-05-24 15:46:19 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-24 15:46:19 INFO: [33mPress CTRL+C to quit[0m
+2025-05-24 15:46:19 INFO:  * Restarting with stat
+2025-05-24 15:46:20 INFO: Scheduler started
+2025-05-24 15:46:20 WARNING:  * Debugger is active!
+2025-05-24 15:46:20 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 15:46:39 INFO: 127.0.0.1 - - [24/May/2025 15:46:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-24 15:46:40 INFO: 127.0.0.1 - - [24/May/2025 15:46:40] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/profile_pics/1_1747757814_ab5fd664ea2544d598dfe02074f8f200_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:46:43 INFO: 127.0.0.1 - - [24/May/2025 15:46:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:46:59 INFO: 127.0.0.1 - - [24/May/2025 15:46:59] "[36mGET /static/profile_pics/1_1747757814_ab5fd664ea2544d598dfe02074f8f200_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "GET / HTTP/1.1" 200 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/3.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/2.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/5.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/6.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/4.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/1.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:11 INFO: 127.0.0.1 - - [24/May/2025 15:47:11] "[36mGET /static/images/11.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:12 INFO: 127.0.0.1 - - [24/May/2025 15:47:12] "[36mGET /static/images/10.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:12 INFO: 127.0.0.1 - - [24/May/2025 15:47:12] "[36mGET /static/images/9.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:12 INFO: 127.0.0.1 - - [24/May/2025 15:47:12] "[36mGET /static/images/7.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:12 INFO: 127.0.0.1 - - [24/May/2025 15:47:12] "[36mGET /static/images/8.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:47:12 INFO: 127.0.0.1 - - [24/May/2025 15:47:12] "[36mGET /static/images/12.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:50:32 INFO: Scheduler started
+2025-05-24 15:50:33 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-24 15:50:33 INFO: [33mPress CTRL+C to quit[0m
+2025-05-24 15:50:33 INFO:  * Restarting with stat
+2025-05-24 15:50:34 INFO: Scheduler started
+2025-05-24 15:50:34 WARNING:  * Debugger is active!
+2025-05-24 15:50:34 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 15:51:34 INFO: 127.0.0.1 - - [24/May/2025 15:51:34] "GET /login HTTP/1.1" 200 -
+2025-05-24 15:51:34 INFO: 127.0.0.1 - - [24/May/2025 15:51:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:51:34 INFO: 127.0.0.1 - - [24/May/2025 15:51:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:51:35 INFO: 127.0.0.1 - - [24/May/2025 15:51:35] "[36mGET /static/js/log-reg.js HTTP/1.1[0m" 304 -
+2025-05-24 15:51:35 INFO: 127.0.0.1 - - [24/May/2025 15:51:35] "[36mGET /static/css/log_reg.css HTTP/1.1[0m" 304 -
+2025-05-24 15:51:40 INFO: 127.0.0.1 - - [24/May/2025 15:51:40] "GET /register HTTP/1.1" 200 -
+2025-05-24 15:51:40 INFO: 127.0.0.1 - - [24/May/2025 15:51:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:51:40 INFO: 127.0.0.1 - - [24/May/2025 15:51:40] "[36mGET /static/css/log_reg.css HTTP/1.1[0m" 304 -
+2025-05-24 15:51:40 INFO: 127.0.0.1 - - [24/May/2025 15:51:40] "[36mGET /static/js/log-reg.js HTTP/1.1[0m" 304 -
+2025-05-24 15:51:40 INFO: 127.0.0.1 - - [24/May/2025 15:51:40] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:21 INFO: 127.0.0.1 - - [24/May/2025 15:52:21] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:52:22 INFO: 127.0.0.1 - - [24/May/2025 15:52:22] "GET /static/images/user_profile.png HTTP/1.1" 200 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:52:35 INFO: 127.0.0.1 - - [24/May/2025 15:52:35] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:36 INFO: 127.0.0.1 - - [24/May/2025 15:52:36] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:52:37 INFO: 127.0.0.1 - - [24/May/2025 15:52:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[32mPOST /dashboard HTTP/1.1[0m" 302 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:01 INFO: 127.0.0.1 - - [24/May/2025 15:53:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:05 INFO: 127.0.0.1 - - [24/May/2025 15:53:05] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:07 INFO: 127.0.0.1 - - [24/May/2025 15:53:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[32mGET /delete/5 HTTP/1.1[0m" 302 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:13 INFO: 127.0.0.1 - - [24/May/2025 15:53:13] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:53:16 INFO: 127.0.0.1 - - [24/May/2025 15:53:16] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:55:38 INFO: 127.0.0.1 - - [24/May/2025 15:55:38] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:55:53 INFO: 127.0.0.1 - - [24/May/2025 15:55:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:58:01 INFO: 127.0.0.1 - - [24/May/2025 15:58:01] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:04 INFO: 127.0.0.1 - - [24/May/2025 15:58:04] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-24 15:58:31 INFO: 127.0.0.1 - - [24/May/2025 15:58:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:58:33 INFO: 127.0.0.1 - - [24/May/2025 15:58:33] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "[32mPOST /upload HTTP/1.1[0m" 302 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "GET /profile HTTP/1.1" 200 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:05 INFO: 127.0.0.1 - - [24/May/2025 15:59:05] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:06 INFO: 127.0.0.1 - - [24/May/2025 15:59:06] "GET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1" 200 -
+2025-05-24 15:59:06 INFO: 127.0.0.1 - - [24/May/2025 15:59:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:59:32 INFO: 127.0.0.1 - - [24/May/2025 15:59:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[32mPOST /dashboard HTTP/1.1[0m" 302 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:59:44 INFO: 127.0.0.1 - - [24/May/2025 15:59:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[32mPOST /dashboard HTTP/1.1[0m" 302 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:59:51 INFO: 127.0.0.1 - - [24/May/2025 15:59:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[32mPOST /dashboard HTTP/1.1[0m" 302 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 15:59:59 INFO: 127.0.0.1 - - [24/May/2025 15:59:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:00 INFO: 127.0.0.1 - - [24/May/2025 16:00:00] "GET /profile HTTP/1.1" 200 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:01 INFO: 127.0.0.1 - - [24/May/2025 16:00:01] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:03 INFO: 127.0.0.1 - - [24/May/2025 16:00:03] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:05 INFO: 127.0.0.1 - - [24/May/2025 16:00:05] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[32mGET /delete/5 HTTP/1.1[0m" 302 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:10 INFO: 127.0.0.1 - - [24/May/2025 16:00:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:14 INFO: 127.0.0.1 - - [24/May/2025 16:00:14] "[32mGET /delete/6 HTTP/1.1[0m" 302 -
+2025-05-24 16:00:14 INFO: 127.0.0.1 - - [24/May/2025 16:00:14] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:15 INFO: 127.0.0.1 - - [24/May/2025 16:00:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "[32mGET /delete/7 HTTP/1.1[0m" 302 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:19 INFO: 127.0.0.1 - - [24/May/2025 16:00:19] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:20 INFO: 127.0.0.1 - - [24/May/2025 16:00:20] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:20 INFO: 127.0.0.1 - - [24/May/2025 16:00:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "GET /profile HTTP/1.1" 200 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 16:00:25 INFO: 127.0.0.1 - - [24/May/2025 16:00:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 16:02:37 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\test.py', reloading
+2025-05-24 16:02:38 INFO:  * Restarting with stat
+2025-05-24 16:02:49 INFO: Scheduler started
+2025-05-24 16:02:49 WARNING:  * Debugger is active!
+2025-05-24 16:02:49 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 18:14:25 INFO: Scheduler started
+2025-05-24 18:14:29 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-24 18:14:29 INFO: [33mPress CTRL+C to quit[0m
+2025-05-24 18:14:29 INFO:  * Restarting with stat
+2025-05-24 18:14:36 INFO: Scheduler started
+2025-05-24 18:14:36 WARNING:  * Debugger is active!
+2025-05-24 18:14:37 INFO:  * Debugger PIN: 107-040-484
+2025-05-24 18:14:39 INFO: 127.0.0.1 - - [24/May/2025 18:14:39] "GET /profile HTTP/1.1" 200 -
+2025-05-24 18:14:41 INFO: 127.0.0.1 - - [24/May/2025 18:14:41] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 18:14:41 INFO: 127.0.0.1 - - [24/May/2025 18:14:41] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 18:14:41 INFO: 127.0.0.1 - - [24/May/2025 18:14:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:14:41 INFO: 127.0.0.1 - - [24/May/2025 18:14:41] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 18:14:42 INFO: 127.0.0.1 - - [24/May/2025 18:14:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 18:14:43 INFO: 127.0.0.1 - - [24/May/2025 18:14:43] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 18:15:09 INFO: 127.0.0.1 - - [24/May/2025 18:15:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 18:15:26 INFO: 127.0.0.1 - - [24/May/2025 18:15:26] "[35m[1mPOST /dashboard HTTP/1.1[0m" 500 -
+2025-05-24 18:15:31 INFO: 127.0.0.1 - - [24/May/2025 18:15:31] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-24 18:15:35 INFO: 127.0.0.1 - - [24/May/2025 18:15:35] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-24 18:15:36 INFO: 127.0.0.1 - - [24/May/2025 18:15:36] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LgRtmS17QFAFCKLFzu3K HTTP/1.1" 200 -
+2025-05-24 18:15:38 INFO: 127.0.0.1 - - [24/May/2025 18:15:38] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-24 18:17:18 INFO: 127.0.0.1 - - [24/May/2025 18:17:18] "[35m[1mPOST /dashboard HTTP/1.1[0m" 500 -
+2025-05-24 18:17:19 INFO: 127.0.0.1 - - [24/May/2025 18:17:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:17:19 INFO: 127.0.0.1 - - [24/May/2025 18:17:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-24 18:17:19 INFO: 127.0.0.1 - - [24/May/2025 18:17:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LgRtmS17QFAFCKLFzu3K HTTP/1.1[0m" 304 -
+2025-05-24 18:17:22 INFO: 127.0.0.1 - - [24/May/2025 18:17:22] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-24 18:17:28 INFO: 127.0.0.1 - - [24/May/2025 18:17:28] "[35m[1mPOST /dashboard HTTP/1.1[0m" 500 -
+2025-05-24 18:17:28 INFO: 127.0.0.1 - - [24/May/2025 18:17:28] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-24 18:17:28 INFO: 127.0.0.1 - - [24/May/2025 18:17:28] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-24 18:17:28 INFO: 127.0.0.1 - - [24/May/2025 18:17:28] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LgRtmS17QFAFCKLFzu3K HTTP/1.1" 200 -
+2025-05-24 18:17:30 INFO: 127.0.0.1 - - [24/May/2025 18:17:30] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 18:17:36 INFO: 127.0.0.1 - - [24/May/2025 18:17:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 18:17:52 INFO: 127.0.0.1 - - [24/May/2025 18:17:52] "[35m[1mPOST /dashboard HTTP/1.1[0m" 500 -
+2025-05-24 18:17:52 INFO: 127.0.0.1 - - [24/May/2025 18:17:52] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:17:52 INFO: 127.0.0.1 - - [24/May/2025 18:17:52] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-24 18:17:52 INFO: 127.0.0.1 - - [24/May/2025 18:17:52] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LgRtmS17QFAFCKLFzu3K HTTP/1.1[0m" 304 -
+2025-05-24 18:17:54 INFO: 127.0.0.1 - - [24/May/2025 18:17:54] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/profile_pics/3_1748098745_8607b3adad9a47d1b7720ea2c613ceff_Peee.jpg HTTP/1.1[0m" 304 -
+2025-05-24 18:19:35 INFO: 127.0.0.1 - - [24/May/2025 18:19:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-24 18:19:44 INFO: 127.0.0.1 - - [24/May/2025 18:19:44] "[35m[1mPOST /dashboard HTTP/1.1[0m" 500 -
+2025-05-24 18:19:45 INFO: 127.0.0.1 - - [24/May/2025 18:19:45] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-24 18:19:45 INFO: 127.0.0.1 - - [24/May/2025 18:19:45] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-24 18:19:45 INFO: 127.0.0.1 - - [24/May/2025 18:19:45] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LgRtmS17QFAFCKLFzu3K HTTP/1.1[0m" 304 -
+2025-05-24 18:19:46 INFO: 127.0.0.1 - - [24/May/2025 18:19:46] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-24 18:26:02 INFO:  * Detected change in 'c:\\Users\\speed\\Desktop\\Todo_list\\main.py', reloading
+2025-05-24 18:26:03 INFO:  * Restarting with stat
+2025-05-24 18:26:31 INFO: Scheduler started
+2025-05-24 18:26:31 WARNING:  * Debugger is active!
+2025-05-24 18:26:31 INFO:  * Debugger PIN: 107-040-484
+2025-05-25 16:53:53 INFO: Scheduler started
+2025-05-25 16:53:53 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-25 16:53:53 INFO: [33mPress CTRL+C to quit[0m
+2025-05-25 16:53:53 INFO:  * Restarting with stat
+2025-05-25 16:53:55 INFO: Scheduler started
+2025-05-25 16:53:55 WARNING:  * Debugger is active!
+2025-05-25 16:53:55 INFO:  * Debugger PIN: 107-040-484
+2025-05-25 16:53:56 INFO: 127.0.0.1 - - [25/May/2025 16:53:56] "GET /profile HTTP/1.1" 200 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-25 16:53:57 INFO: 127.0.0.1 - - [25/May/2025 16:53:57] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-25 16:53:59 INFO: 127.0.0.1 - - [25/May/2025 16:53:59] "GET /dashboard HTTP/1.1" 200 -
+2025-05-25 16:54:00 INFO: 127.0.0.1 - - [25/May/2025 16:54:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:00 INFO: 127.0.0.1 - - [25/May/2025 16:54:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:00 INFO: 127.0.0.1 - - [25/May/2025 16:54:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-25 16:54:00 INFO: 127.0.0.1 - - [25/May/2025 16:54:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:00 INFO: 127.0.0.1 - - [25/May/2025 16:54:00] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "GET /profile HTTP/1.1" 200 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:03 INFO: 127.0.0.1 - - [25/May/2025 16:54:03] "[36mGET /static/images/user_profile.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:09 INFO: 127.0.0.1 - - [25/May/2025 16:54:09] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-25 16:54:09 INFO: 127.0.0.1 - - [25/May/2025 16:54:09] "GET / HTTP/1.1" 200 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/logo-white.png HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/1.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/2.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/3.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/4.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/5.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/6.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/7.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/8.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/9.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/10.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/12.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:10 INFO: 127.0.0.1 - - [25/May/2025 16:54:10] "[36mGET /static/images/11.jpg HTTP/1.1[0m" 304 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/css/log_reg.css HTTP/1.1[0m" 304 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/js/log-reg.js HTTP/1.1[0m" 304 -
+2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -

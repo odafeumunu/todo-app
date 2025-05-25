@@ -45,7 +45,7 @@
                             <i class="ri-list-check-2 total"></i>
                             <div class="inner">
                                 <h3>Total Task <br> Added</h3>
-                                <p>{{ user.tasks_added }}</p>
+                                <p>{{ total_tasks }}</p>
                             </div>
                         </div>
 
@@ -53,15 +53,15 @@
                             <i class="ri-trophy-fill completed"></i>
                             <div class="inner">
                                 <h3>Total Task <br> Completed</h3>
-                                <p>{{ user.tasks_completed }}</p>
+                                <p>{{ completed_tasks }}</p>
                             </div>
-                        </div>
+                        </div> 
 
                         <div class="cover">
                             <i class="ri-hourglass-fill pending"></i>
                             <div class="inner">                                
                                 <h3>Total Task <br> Pending</h3>
-                                <p>{{ current_user.tasks_added - current_user.tasks_completed }}</p>
+                                <p>{{ pending_tasks}}</p>
                             </div>
                         </div>
                     </div>

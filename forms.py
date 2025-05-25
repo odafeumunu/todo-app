@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, EmailField, DateTimeLocalField, BooleanField, FileField
+from wtforms import HiddenField, StringField, SubmitField, PasswordField, EmailField, DateTimeLocalField, BooleanField, FileField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 
@@ -30,6 +30,7 @@ class NewPasswordForm(FlaskForm):
 class AddTask(FlaskForm):
     add_task = StringField(validators=[DataRequired()] )
     due_date = DateTimeLocalField("Set due date and time:", format="%Y-%m-%dT%H:%M", validators=[DataRequired()])
+    timezone_offset = HiddenField('Timezone Offset')
     
 
 class CompleteTaskForm(FlaskForm): 

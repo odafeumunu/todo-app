@@ -6,10 +6,16 @@
     margin-left: 15px;
     background-color: #fff;
     box-shadow: var(--box-shadow2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.header .user-icon img{
+.header .user-icon img{ 
     width: 100%;
     object-fit: cover;
+}
+.header .user-icon i{
+    font-size: 1.2rem;
 }
 
 .sidebar{
@@ -540,7 +546,7 @@
     background-color: #fff;
 }
 .task_col .cover:nth-child(2) .inner{
-    background-color: green;
+    background-color: #32CD32;
     color: #fff;
 }
 .task_col .cover:nth-child(2) .inner::after,
@@ -548,7 +554,7 @@
     background-color: #fff;
 }
 .task_col .cover:nth-child(3) .inner{
-    background-color: var(--yellow-color);
+    background-color: #ffc107;
     color: #fff;
 }
 .task_col .cover:nth-child(3) .inner::after,

@@ -35,8 +35,12 @@
                         {% endfor %}
                         <div class="add_task">                        
                             {{ form.due_date }}                        
-                        </div>                    
+                        </div>  
+                        
+                        <!-- Hidden field for time zone offset -->
+                        {{ form.timezone_offset() }}
                     </div>
+
                     <button type="submit" class="task-submit">
                         <i class="ri-check-line"></i>
                     </button>
@@ -97,7 +101,7 @@
                                                 <a href="#" class="edit-task" 
                                                     data-task-id="{{ item.id }}" 
                                                     data-task-text="{{ item.task }}" 
-                                                    data-due-date="{{ item.due_date.isoformat() }}">
+                                                    data-due-date="{{ item.local_due_date.isoformat() }}">
                                                     <div class="fle">
                                                         <i class="ri-edit-line"></i>
                                                         <span>Edit task</span>
@@ -126,15 +130,15 @@
                                             </div>
                                             <div class="inner">
                                                 <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>{{ item.task }}</p>
-                                                <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
-                                                <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
-                                                {% if item.completed_at %}
+                                                <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.local_due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                                <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.local_created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                                {% if item.local_time %}
                                                     <p>📅
                                                         <strong style="margin: 0 10px 0 7px;">Status:</strong> 
                                                         <span style="color: green;">Completed</span>
                                                     </p>
                                                     <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
-                                                        {{ item.completed_at.strftime("%Y-%m-%d, %H:%M") }}
+                                                        {{ item.local_time.strftime("%Y-%m-%d, %H:%M") }}
                                                     </p>
                                                     {% else %}
                                                     <p>📅<strong style="margin: 0 10px 0 7px;">Status:</strong> 
@@ -189,7 +193,10 @@
                                                 {{ form.due_date.label(style='display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;') }}
                                                 <div class="taskEdit">                        
                                                     {{ form.due_date }}                                        
-                                                </div>    
+                                                </div>   
+                                                <!-- Hidden field for time zone offset -->
+                                                {{ form.timezone_offset() }} 
+
                                                 <button type="submit" class="d-btn">
                                                     Update Task
                                                 </button>
@@ -256,7 +263,7 @@
                                         <a href="#" class="edit-task" 
                                             data-task-id="{{ item.id }}" 
                                             data-task-text="{{ item.task }}" 
-                                            data-due-date="{{ item.due_date.isoformat() }}">
+                                            data-due-date="{{ item.local_due_date.isoformat() }}">
                                             <div class="fle">
                                                 <i class="ri-edit-line"></i>
                                                 <span>Edit task</span>
@@ -285,15 +292,15 @@
                                     </div>
                                     <div class="inner">
                                         <p>📝<strong style="margin: 0 10px 0 7px;">Task Name:</strong>{{ item.task }}</p>
-                                        <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
-                                        <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
-                                        {% if item.completed_at %}
+                                        <p>⏳<strong style="margin: 0 10px 0 7px;">Due Date/Time:</strong>{{ item.local_due_date.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                        <p>📅<strong style="margin: 0 10px 0 7px;">Date/Time Created:</strong>{{ item.local_created_at.strftime("%Y-%m-%d, %H:%M") }}</p>
+                                        {% if item.local_time %}
                                             <p>📅
                                                 <strong style="margin: 0 10px 0 7px;">Status:</strong> 
                                                 <span style="color: green;">Completed</span>
                                             </p>
                                             <p>📶<strong style="margin: 0 10px 0 7px;">Date/Time Completed:</strong>
-                                                {{ item.completed_at.strftime("%Y-%m-%d, %H:%M") }}
+                                                {{ item.local_time.strftime("%Y-%m-%d, %H:%M") }}
                                             </p>
                                             {% else %}
                                             <p>📅<strong style="margin: 0 10px 0 7px;">Status:</strong> 
@@ -348,7 +355,11 @@
                                         {{ form.due_date.label(style='display: inline-block;margin: 15px 0 5px 0;font-size: 0.9rem;font-weight: 500;') }}
                                         <div class="taskEdit">                        
                                             {{ form.due_date }}                                        
-                                        </div>    
+                                        </div> 
+
+                                        <!-- Hidden field for time zone offset -->
+                                        {{ form.timezone_offset() }} 
+
                                         <button type="submit" class="d-btn">
                                             Update Task
                                         </button>
@@ -367,6 +378,14 @@
         </div>
     </main>
     <!-- main end -->
+
+    <script>
+        // When the form is submitted, capture the time zone offset and set it in the hidden field
+        document.querySelector('form').addEventListener('submit', function() {
+            var offset = new Date().getTimezoneOffset(); // Get the time zone offset in minutes
+            document.querySelector('input[name="timezone_offset"]').value = offset; // Set the value of the hidden input
+        });
+    </script>
 
     
 
