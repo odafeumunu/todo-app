@@ -605,3 +605,11 @@
 2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/css/log_reg.css HTTP/1.1[0m" 304 -
 2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/js/log-reg.js HTTP/1.1[0m" 304 -
 2025-05-25 16:54:19 INFO: 127.0.0.1 - - [25/May/2025 16:54:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-25 16:56:36 INFO: Scheduler started
+2025-05-25 16:56:36 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-25 16:56:36 INFO: [33mPress CTRL+C to quit[0m
+2025-05-25 16:56:36 INFO:  * Restarting with stat
+2025-05-25 16:56:37 INFO: Scheduler started
+2025-05-25 16:56:37 WARNING:  * Debugger is active!
+2025-05-25 16:56:37 INFO:  * Debugger PIN: 107-040-484

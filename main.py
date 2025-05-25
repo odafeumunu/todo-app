@@ -516,7 +516,7 @@ def check_and_send_reminders():
                 print(f'❌ Email not sent to {user.email}. Status: {response.status_code}')
 
         except Exception as e:
-            db.session.rollback()
+            db.session.rollback() 
             print(f"❌ Failed to send email to {user.email}: {e}")
 
         
@@ -526,6 +526,8 @@ def check_and_send_reminders():
 def run_reminder():
     with app.app_context():
         check_and_send_reminders()
+    return "Email Sent"
+
 
     
 
