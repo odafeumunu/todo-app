@@ -359,7 +359,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
   .container-one .container {
-    grid-template-columns: subgrid;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -422,7 +422,7 @@ h2 {
 }
 @media only screen and (max-width: 768px) {
   .container-two .cont {
-    grid-template-columns: subgrid;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -443,7 +443,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
   .container-three .cont {
-    grid-template-columns: subgrid;
+    grid-template-columns: 1fr;
   }
 }
 

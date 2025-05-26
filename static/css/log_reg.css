@@ -98,7 +98,7 @@ form .btn{
 }
 @media only screen and (max-width: 768px){
     .log-container{
-        grid-template-columns: subgrid;
+        grid-template-columns: 1fr;
         padding-top: 50px;
         overflow: auto;
     }
